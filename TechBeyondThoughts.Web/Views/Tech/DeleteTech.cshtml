@@ -1,0 +1,46 @@
+﻿@model TechDataDto
+
+
+    <form asp-action="DeleteTech">
+        <input asp-for="Id"  hidden/>
+        <div class="form-group">
+            <label asp-for="Title">Title:</label>
+            <input asp-for="Title" type="text" disabled class="form-control" id="title" placeholder="Enter technology title" required>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description">Description:</label>
+        <textarea asp-for="Description" disabled class="form-control" id="description" rows="4" placeholder="Enter technology description" required></textarea>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Category">Category:</label>
+        <input type="text" asp-for="Category" disabled class="form-control" id="category" placeholder="Enter technology category" required>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="InventorName">Inventor's Name:</label>
+        <input type="text" asp-for="InventorName" disabled class="form-control" id="inventorName" placeholder="Enter inventor's name" required>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="InventionDate">Invention Date:</label>
+        <input type="date" asp-for="InventionDate" disabled class="form-control" id="inventionDate" required>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageUrl">Image URL:</label>
+        <input type="url" asp-for="ImageUrl" disabled class="form-control" id="imageUrl" placeholder="Enter image URL" required>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Delete Technology</button>
+
+    </form>
+    <br>
+
+

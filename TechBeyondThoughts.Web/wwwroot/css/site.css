@@ -1,0 +1,125 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+    width: fit-content;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: white;
+    width: fit-content;
+}
+.read-more-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px; /* Adjust padding for button size */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+    .read-more-button:hover {
+        background-color: #0056b3; /* Button background color on hover */
+    }
+
+.background-image {
+    background-image: url('path/to/your/transparent-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+.text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Input Styles */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+/* Validation Message Styles */
+.text-danger {
+    color: #dc3545;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 20px;
+    }
+}

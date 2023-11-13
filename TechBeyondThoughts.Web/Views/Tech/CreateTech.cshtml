@@ -1,0 +1,56 @@
+﻿@model TechDataDto
+<div class="formContainer">
+
+        <form asp-action="CreateTech">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title">Title:</label>
+                <input asp-for="Title" type="text" class="form-control" id="title" placeholder="Enter technology title" required>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description">Description:</label>
+                <textarea asp-for="Description" class="form-control" id="description" rows="4" placeholder="Enter technology description" required></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Category">Category:</label>
+                <input type="text" asp-for="Category" class="form-control" id="category" placeholder="Enter technology category" required>
+                <span asp-validation-for="Category" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="InventorName">Inventor's Name:</label>
+                <input type="text" asp-for="InventorName" class="form-control" id="inventorName" placeholder="Enter inventor's name" required>
+                <span asp-validation-for="InventorName" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="InventionDate">Invention Date:</label>
+                <input type="date" asp-for="InventionDate" class="form-control" id="inventionDate" required>
+                <span asp-validation-for="InventionDate" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ImageUrl">Image URL:</label>
+                <input type="url" asp-for="ImageUrl" class="form-control" id="imageUrl" placeholder="Enter image URL" required>
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Technology</button>
+        
+        </form>
+        <br>
+
+</div>
+
+    @section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    }

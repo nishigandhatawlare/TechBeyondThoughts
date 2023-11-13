@@ -1,0 +1,41 @@
+﻿
+@model IEnumerable<TechDataDto>
+<div class="container">
+    <h3 class="display-4" style="color:white">All Technologies...</h3>
+    <div class="row">
+        @foreach (var tech in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <!-- Added mb-4 for space between columns -->
+                <div class="card" style="width: 310px; height:400px; border-color:white " color: white;" >
+                    <img src="@tech.ImageUrl" class="card-img-top" alt="..." style="height: 300px; width: 300px;">
+                    <div class="card-body">
+                        <h5 class="card-title">@tech.Title</h5>
+                        <p class="card-text" style="color:white">@tech.Description</p>
+                        <a asp-route="techDetailsRoute" asp-route-id="@tech.Id" class="btn btn-primary">Read More...</a>
+                        <a asp-action="DeleteTech" asp-route-techId="@tech.Id" class=" btn btn-danger">
+                            Delete
+
+
+                        </a>
+
+                       
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+@* <div class="col-md-4">
+    <div class="card" style="width: 15rem; height: fit-content">
+        <img src="@tech.ImageUrl" class="card-img-top" alt="...">
+        <h6 class="card-title">@tech.Title</h6>
+        <div class="card-body">
+            <p class="card-text">@tech.Description</p>
+            <a asp-route="techDetailsRoute" asp-route-id="@tech.Id" class="btn btn-primary">Read More...</a>
+        </div>
+    </div>
+</div> *@
