@@ -49,13 +49,14 @@ p {
     }
 
 .background-image {
-    background-image: url('path/to/your/transparent-image.jpg');
+    background-image: url('hero-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-position: center;
 }
 
 .content {

@@ -51,14 +51,12 @@ namespace TechBeyondThoughts.Web.Controllers
                 {
                     TempData["error"] = responce?.Message;
                 }
-
             }
             return View(model);
         }
 
         public async Task<IActionResult> DeleteTech(int techId)
         {
-            //return View();
             ResponceDto? responce = await _techService.GetTechByIdAsync(techId);
 
             if (responce != null && responce.IsSuccess)
@@ -76,7 +74,6 @@ namespace TechBeyondThoughts.Web.Controllers
         public async Task<IActionResult> DeleteTech(TechDataDto techDataDto)
         {
             ResponceDto? responce = await _techService.DeleteTechAsync(techDataDto.Id);
-
             if (responce != null && responce.IsSuccess)
             {
                 return RedirectToAction(nameof(TechIndex));

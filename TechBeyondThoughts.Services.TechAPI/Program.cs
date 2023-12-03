@@ -2,6 +2,9 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using TechBeyondThoughts.Services.TechAPI;
 using TechBeyondThoughts.Services.TechAPI.Data;
+using Sieve.Services;
+using Microsoft.Extensions.Configuration;
+using Sieve.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +18,9 @@ IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-
 builder.Services.AddControllers();
+builder.Services.AddScoped<ISieveProcessor, SieveProcessor>();
+builder.Services.Configure<SieveOptions>(builder.Configuration.GetSection("Sieve"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

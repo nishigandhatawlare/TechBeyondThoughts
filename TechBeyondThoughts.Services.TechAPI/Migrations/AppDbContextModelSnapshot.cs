@@ -55,7 +55,7 @@ namespace TechBeyondThoughts.Services.TechAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Techstacks");
+                    b.ToTable("Techstacks", (string)null);
 
                     b.HasData(
                         new

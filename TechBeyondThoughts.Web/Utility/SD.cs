@@ -3,8 +3,10 @@
     public class SD
     {
         public static String TechAPIBase { get; set; }
+		public static String AuthAPIBase { get; set; }
 
-        public enum ApiType
+
+		public enum ApiType
         {
             GET,
             POST,

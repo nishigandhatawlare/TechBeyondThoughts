@@ -1,3 +1,11 @@
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.csproj.AssemblyReference.cache
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.AssemblyInfoInputs.cache
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.AssemblyInfo.cs
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.csproj.CoreCompileInputs.cache
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.RazorAssemblyInfo.cache
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.RazorAssemblyInfo.cs
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\appsettings.Development.json
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\appsettings.json
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\TechBeyondThoughts.Web.staticwebassets.runtime.json
@@ -7,14 +15,6 @@ D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\TechBeyondThoughts
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\TechBeyondThoughts.Web.dll
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\TechBeyondThoughts.Web.pdb
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\Newtonsoft.Json.dll
-D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.csproj.AssemblyReference.cache
-D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.GeneratedMSBuildEditorConfig.editorconfig
-D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.AssemblyInfoInputs.cache
-D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.AssemblyInfo.cs
-D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.csproj.CoreCompileInputs.cache
-D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.MvcApplicationPartsAssemblyInfo.cache
-D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.RazorAssemblyInfo.cache
-D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.RazorAssemblyInfo.cs
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\staticwebassets\msbuild.TechBeyondThoughts.Web.Microsoft.AspNetCore.StaticWebAssets.props
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\staticwebassets\msbuild.build.TechBeyondThoughts.Web.props
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.TechBeyondThoughts.Web.props
