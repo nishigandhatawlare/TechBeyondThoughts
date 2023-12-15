@@ -1,0 +1,13 @@
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\bin\Debug\net7.0\TechBeyondThoughts.MessageBus.deps.json
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\bin\Debug\net7.0\TechBeyondThoughts.MessageBus.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\bin\Debug\net7.0\TechBeyondThoughts.MessageBus.pdb
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\TechBeyondThoughts.MessageBus.csproj.AssemblyReference.cache
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\TechBeyondThoughts.MessageBus.GeneratedMSBuildEditorConfig.editorconfig
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\TechBeyondThoughts.MessageBus.AssemblyInfoInputs.cache
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\TechBeyondThoughts.MessageBus.AssemblyInfo.cs
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\TechBeyondThoughts.MessageBus.csproj.CoreCompileInputs.cache
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\TechBeyondThoughts.MessageBus.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\refint\TechBeyondThoughts.MessageBus.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\TechBeyondThoughts.MessageBus.pdb
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\ref\TechBeyondThoughts.MessageBus.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.MessageBus\obj\Debug\net7.0\TechBeyondThoughts.MessageBus.sourcelink.json

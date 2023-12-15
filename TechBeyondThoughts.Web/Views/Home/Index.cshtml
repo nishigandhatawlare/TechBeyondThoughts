@@ -1,11 +1,85 @@
-﻿<div class="jumbotron">
-    <h1 class="display-4">Welcome to Your Tech!</h1>
-    <p class="lead">Discover the latest in technology.</p>
-    <hr class="my-4">
-    <p>Explore our features and stay connected.</p>
-    <a class="btn btn-primary btn-lg read-more-button" href="#" role="button">Get Started</a>
+﻿@model PaginatedList<TechBeyondThoughts.Web.Models.Article>
+<div class="container">
+    <h2>Technology News</h2>
+
+    @if (Model != null && Model.Any())
+    {
+        <div>
+            <div class="news-container">
+                @foreach (var article in Model)
+                {
+                    <div class="card mb-3">
+                        @if (!string.IsNullOrEmpty(article.UrlToImage))
+                        {
+@*                             <img src="@article.UrlToImage" class="card-img-top img-thumbnail" alt="Article Image">
+                *@ <img src="@article.UrlToImage" class="card-img-top img-thumbnail" alt="Article Image" style="max-width: 400px; max-height: 300px;">
+
+                        }
+                        <div class="card-body">
+                            <h3 class="card-title">@article.Title</h3>
+                            @if (!string.IsNullOrEmpty(article.Author))
+                            {
+                                <p class="card-text">Author: @article.Author</p>
+                            }
+                            <p class="card-text">@article.Description</p>
+                            <p class="card-text"><small class="text-muted">Published on: @article.PublishedAt.ToString("MMMM dd, yyyy HH:mm")</small></p>
+                            <a href="@article.Url" class="btn btn-primary" target="_blank">Read More</a>
+                            <hr class="my-4">
+                        </div>
+
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    @if (Model.HasPreviousPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="?page=@(Model.PageIndex - 1)" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item disabled">
+                            <span class="page-link" aria-hidden="true">&laquo;</span>
+                        </li>
+                    }
+
+                    @for (int i = 1; i <= Model.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                            <a class="page-link" href="?page=@i">@i</a>
+                        </li>
+                    }
+
+                    @if (Model.HasNextPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="?page=@(Model.PageIndex + 1)" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item disabled">
+                            <span class="page-link" aria-hidden="true">&raquo;</span>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            Error retrieving technology news.
+        </div>
+    }
 </div>
 
-<div>
-    <img src="https://img.freepik.com/free-photo/man-wearing-smart-glasses-touching-virtual-screen-futuristic-technology-digital-remix_53876-104247.jpg?w=1060&t=st=1701079356~exp=1701079956~hmac=7d6466786834d3adc09eb4fc6542eb86b06c1cb948c6ba00e19a729dde00f48c" alt="Technology Image" class="img-fluid" />
-</div>

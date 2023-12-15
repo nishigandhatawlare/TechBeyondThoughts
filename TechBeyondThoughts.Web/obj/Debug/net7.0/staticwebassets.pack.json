@@ -5,12 +5,60 @@
       "PackagePath": "staticwebassets\\TechBeyondThoughts.Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\assets\\js\\breakpoints.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\breakpoints.min.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\assets\\js\\browser.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\browser.min.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\assets\\js\\jquery.scrollex.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.scrollex.min.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\assets\\js\\jquery.scrolly.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.scrolly.min.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\assets\\js\\util.js",
+      "PackagePath": "staticwebassets\\assets\\js\\util.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\landing-page.css",
+      "PackagePath": "staticwebassets\\css\\landing-page.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\noscript.css",
+      "PackagePath": "staticwebassets\\css\\noscript.css"
     },
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\responsive.css",
@@ -31,6 +79,58 @@
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\style.scss",
       "PackagePath": "staticwebassets\\css\\style.scss"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\css\\style.css",
+      "PackagePath": "staticwebassets\\dist\\css\\style.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\cta-illustration.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\cta-illustration.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\feature-icon-01.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\feature-icon-01.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\feature-icon-02.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\feature-icon-02.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\feature-icon-03.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\feature-icon-03.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\feature-icon-04.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\feature-icon-04.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\feature-icon-05.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\feature-icon-05.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\feature-icon-06.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\feature-icon-06.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\hero-back-illustration.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\hero-back-illustration.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\hero-top-illustration.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\hero-top-illustration.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\logo.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\images\\pricing-illustration.svg",
+      "PackagePath": "staticwebassets\\dist\\images\\pricing-illustration.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\dist\\js\\main.min.js",
+      "PackagePath": "staticwebassets\\dist\\js\\main.min.js"
     },
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\favicon.ico",
@@ -125,6 +225,18 @@
       "PackagePath": "staticwebassets\\images\\team-4.jpg"
     },
     {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\techLogo.jpg",
+      "PackagePath": "staticwebassets\\images\\techLogo.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\techbeyondthoughts-high-resolution-logo-white.png",
+      "PackagePath": "staticwebassets\\images\\techbeyondthoughts-high-resolution-logo-white.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\techbeyondthoughts-high-resolution-logo.png",
+      "PackagePath": "staticwebassets\\images\\techbeyondthoughts-high-resolution-logo.png"
+    },
+    {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\track-bg.jpg",
       "PackagePath": "staticwebassets\\images\\track-bg.jpg"
     },
@@ -149,6 +261,14 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.js"
     },
     {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\js\\breakpoints.min.js",
+      "PackagePath": "staticwebassets\\js\\breakpoints.min.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\js\\browser.min.js",
+      "PackagePath": "staticwebassets\\js\\browser.min.js"
+    },
+    {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\js\\custom.js",
       "PackagePath": "staticwebassets\\js\\custom.js"
     },
@@ -159,6 +279,10 @@
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\js\\util.js",
+      "PackagePath": "staticwebassets\\js\\util.js"
     },
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -387,6 +511,14 @@
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\lib\\jquery\\jquery.scrollex.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.scrollex.min.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\lib\\jquery\\jquery.scrolly.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.scrolly.min.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.TechBeyondThoughts.Web.Microsoft.AspNetCore.StaticWebAssets.props",

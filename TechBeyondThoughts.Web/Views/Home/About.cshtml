@@ -1,38 +1,90 @@
-﻿<section class="about_section layout_padding">
-    <div class="container  ">
-        <div class="heading_container heading_center">
-            <h2>
-                About <span>Us</span>
-            </h2>
-            <p>
-                Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus
-            </p>
-        </div>
-        <div class="row">
-            <div class="col-md-6 ">
-                <div class="img-box">
-                    <img src="images/about-img.png" alt="">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="detail-box">
-                    <h3>
-                        We Are Finexo
-                    </h3>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                        in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                        are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                        the middle of text. All
-                    </p>
-                    <p>
-                        Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-                    </p>
-                    <a href="">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+﻿
+
+            @* ghj *@
+@{
+	ViewData["Title"] = "Contact Us";
+	Layout = null; // Disable layout for this view
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/css/main.css" />
+	<noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+	<div id="wrapper">
+		<header id="header" class="alt">
+			<a asp-controller="Home" asp-action="Index" class="logo">
+				<strong>TechBeyondThoughts</strong>
+			</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+		<nav id="menu">
+			<ul class="links">
+				<li><a asp-controller="Home" asp-action="Index">Home</a></li>
+				<li><a asp-controller="Home" asp-action="LandingPage">Landing</a></li>
+				<li><a asp-controller="Tech" asp-action="TechIndex">Explore</a></li>
+				<li><a asp-controller="Home" asp-action="About">About Us</a></li>
+			</ul>
+			<ul class="actions stacked">
+				@if (!User.Identity.IsAuthenticated)
+				{
+					<li><a asp-controller="Auth" asp-action="Login" class="button fit">Log In</a></li>
+					<li><a asp-controller="Auth" asp-action="Register" class="button fit">Register</a></li>
+				}
+				else
+				{
+					<li><a href="#" class="button fit">Hello, @User.Identity.Name</a></li>
+					<li><a asp-controller="Auth" asp-action="Logout" class="button fit">Logout</a></li>
+				}
+			</ul>
+		</nav>
+
+		<!-- About -->
+		<section id="two">
+			<div class="inner">
+				<header class="major">
+					<h2>About Us</h2>
+				</header>
+					<p>Welcome to TechBeyondThoughts, a learning journey where we explore the exciting world of technology and innovation. As passionate learners ourselves, we're on a mission to discover, create, and share our insights with fellow tech enthusiasts like you.</p>
+					<p>TechBeyondThoughts was born out of a curiosity for technology that knows no bounds. Created as a learning project, this platform is a sandbox where we experiment, code, and tinker with ideas that spark our imagination.</p>
+					<p>Whether you're a fellow learner, a beginner in tech, or someone just curious about our projects, we invite you to be part of this educational expedition. Explore our projects, dive into our code, and join the conversation in our learning community.</p>
+					<p>We're excited to connect with learners, enthusiasts, and anyone who shares our passion for technology. Reach out to us at <a href="mailto:contact@techbeyondthoughts.com">contact@techbeyondthoughts.com</a> to share ideas, ask questions, or simply say hello.</p>
+					<p>Let's learn, innovate, and go beyond what we thought was possible!</p>
+
+					<div>
+						<p>Happy coding!!</p>
+						<p>Nishigandha Tawlare<br>-TechBeyondThoughts</p>
+					</div>
+			</div>
+		</section>
+		<!--  End About -->
+
+
+		<footer class="footer text-muted">
+			<div class="text-center">
+				&copy; 2023 - TechBeyondThoughts.Web
+			</div>
+		</footer>
+		<script src="~/assets/js/jquery.min.js"></script>
+		<script src="~/assets/js/jquery.scrolly.min.js"></script>
+		<script src="~/assets/js/jquery.scrollex.min.js"></script>
+		<script src="~/assets/js/browser.min.js"></script>
+		<script src="~/assets/js/breakpoints.min.js"></script>
+		<script src="~/assets/js/util.js"></script>
+		<script src="~/assets/js/main.js"></script>
+	</div>
+
+</body>
+</html>
+
+            @* jgk *@

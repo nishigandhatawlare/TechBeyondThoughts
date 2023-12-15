@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TechBeyondThoughts.Web.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TechBeyondThoughts.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="LandingPage" style="padding: 0;">
+					TechBeyondThoughts.Web
+                </a>
+
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
@@ -26,14 +30,25 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Tech" asp-action="TechIndex">Explore</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            
+                                @if (User.IsInRole("ADMIN"))
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Tech" asp-action="CreateTech">Create</a>
+                                    </li>
+                                }
+                          
+                        }
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Tech" asp-action="CreateTech">Create</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Contact Us</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Faq">FAQ's</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav me-auto">
@@ -49,12 +64,15 @@
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
+                                <a class="nav-link" href="#">Hello, @User.Identity.Name</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Auth" asp-action="Logout">Logout</a>
                             </li>
                         }
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                    <form class="d-flex" asp-controller="Tech" asp-action="Search" method="get">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search by Category" name="Keyword">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>

@@ -45,7 +45,8 @@ namespace TechBeyondThoughts.Services.AuthAPI.Service
 				return new LoginResponceDto() {User= null,Token="" };
 			}
 			//if user found , we need to Generate JWT Token
-			 var token =  _jwtTokenGenerator.GenerateToken(user);
+			var roles = await _userManager.GetRolesAsync(user);
+			 var token =  _jwtTokenGenerator.GenerateToken(user, roles);
 
 			UserDto userDto = new()
 			{

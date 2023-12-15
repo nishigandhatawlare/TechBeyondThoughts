@@ -1,18 +1,16 @@
 ﻿using AutoMapper;
-using Azure;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Sieve.Models;
 using Sieve.Services;
 using TechBeyondThoughts.Services.TechAPI.Data;
 using TechBeyondThoughts.Services.TechAPI.Models;
 using TechBeyondThoughts.Services.TechAPI.Models.Dto;
-using static Azure.Core.HttpHeader;
 
 namespace TechBeyondThoughts.Services.TechAPI.Controllers
 {
     [Route("api/tech")]
     [ApiController]
+    [Authorize]   
     public class TechAPIController : ControllerBase
     {
         private readonly AppDbContext _db;
@@ -26,39 +24,25 @@ namespace TechBeyondThoughts.Services.TechAPI.Controllers
             _responce = new ResponceDto();
             _sieveProcessor = sieveProcessor;
         }
-		[HttpGet]
-		public IActionResult Get([FromQuery] SieveModel sieveModel)
-		{
-			try
-			{
-				// Create a queryable object
-				var query = _db.Techstacks.AsQueryable();
+		
+        [HttpGet]
+        public ResponceDto Get()
+        {
+            try
+            {
+                IEnumerable<TechData> objList = _db.Techstacks.ToList();
+                _responce.Result = _mapper.Map<IEnumerable<TechDataDto>>(objList);
+            }
+            catch (Exception ex)
+            {
+                _responce.IsSuccess = false;
+                _responce.Message = ex.Message;
+            }
+            return _responce;
 
-				// Apply Sieve filtering and sorting
-				var paginatedData = _sieveProcessor.Apply<TechData>(sieveModel, query);
+        }
 
-				// Map the paginated result to IEnumerable<TechDataDto>
-				var mappedResult = _mapper.Map<IEnumerable<TechDataDto>>(paginatedData);
-
-				// Return the mapped result within the Ok response
-				return Ok(mappedResult);
-			}
-			catch (Exception ex)
-			{
-				// Handle exceptions
-				var errorResponse = new ResponceDto
-				{
-					IsSuccess = false,
-					Message = ex.Message
-				};
-
-				// Return an error response
-				return BadRequest(errorResponse);
-			}
-		}
-
-
-		[HttpGet]
+        [HttpGet]
         [Route("id:int")]
         public ResponceDto Get(int id)
         {
@@ -81,23 +65,27 @@ namespace TechBeyondThoughts.Services.TechAPI.Controllers
         {
             try
             {
-                TechData objList = _db.Techstacks.FirstOrDefault(u => u.Title == name);
-                if (objList == null)
+                List<TechData> objList = _db.Techstacks.Where(u => u.Category == name).ToList();
+
+                if (objList == null || objList.Count == 0)
                 {
                     _responce.IsSuccess = false;
                 }
-                _responce.Result = _mapper.Map<TechDataDto>(objList);
 
+                _responce.Result = _mapper.Map<List<TechDataDto>>(objList);
             }
             catch (Exception ex)
             {
                 _responce.IsSuccess = false;
                 _responce.Message = ex.Message;
             }
+
             return _responce;
         }
 
+
         [HttpPost]
+        [Authorize(Roles ="ADMIN")]
         public ResponceDto Post([FromBody] TechDataDto techDataDto)
         {
             try
@@ -115,8 +103,8 @@ namespace TechBeyondThoughts.Services.TechAPI.Controllers
             }
             return _responce;
         }
-
         [HttpPut]
+        [Authorize(Roles = "ADMIN")]
         public ResponceDto Put([FromBody] TechDataDto techdataDto)
         {
             try
@@ -134,7 +122,9 @@ namespace TechBeyondThoughts.Services.TechAPI.Controllers
             }
             return _responce;
         }
+
         [HttpDelete]
+        [Authorize(Roles = "ADMIN")]
         [Route("id:int")]
         public ResponceDto Delete(int id)
         {

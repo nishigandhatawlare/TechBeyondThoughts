@@ -77,3 +77,4 @@ D:\TechBeyondThoughts\TechBeyondThoughts.Services.TechAPI\obj\Debug\net7.0\refin
 D:\TechBeyondThoughts\TechBeyondThoughts.Services.TechAPI\obj\Debug\net7.0\TechBeyondThoughts.Services.TechAPI.pdb
 D:\TechBeyondThoughts\TechBeyondThoughts.Services.TechAPI\obj\Debug\net7.0\TechBeyondThoughts.Services.TechAPI.genruntimeconfig.cache
 D:\TechBeyondThoughts\TechBeyondThoughts.Services.TechAPI\obj\Debug\net7.0\ref\TechBeyondThoughts.Services.TechAPI.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Services.TechAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

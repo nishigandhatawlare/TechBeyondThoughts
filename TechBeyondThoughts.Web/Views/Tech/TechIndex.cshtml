@@ -1,41 +1,143 @@
-﻿
-@model IEnumerable<TechDataDto>
-<div class="container">
-    <h3 class="display-4" style="color:white">All Technologies...</h3>
-    <div class="row">
-        @foreach (var tech in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <!-- Added mb-4 for space between columns -->
-                <div class="card" style="width: 310px; height:400px; border-color:white " color: white;" >
-                    <img src="@tech.ImageUrl" class="card-img-top" alt="..." style="height: 300px; width: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">@tech.Title</h5>
-                        <p class="card-text" style="color:white">@tech.Description</p>
-                        <a asp-route="techDetailsRoute" asp-route-id="@tech.Id" class="btn btn-primary">Read More...</a>
-                        <a asp-action="DeleteTech" asp-route-techId="@tech.Id" class=" btn btn-danger">
-                            Delete
+﻿ @model PaginatedList<TechDataDto>
+@{
+    ViewData["Title"] = "Contact Us";
+    Layout = null; // Disable layout for this view
 
+}
+<!DOCTYPE html>
+<html lang="en">
 
-                        </a>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/main.css" />
+    <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+</head>
 
-                       
-                    </div>
+<body class="is-preload">
+
+    <div id="wrapper">
+        <header id="header" class="alt">
+            <a asp-controller="Home" asp-action="Index" class="logo">
+                <strong>TechBeyondThoughts</strong>
+            </a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+        <nav id="menu">
+            <ul class="links">
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="LandingPage">Landing</a></li>
+                <li><a asp-controller="Tech" asp-action="TechIndex">Explore</a></li>
+                <li><a asp-controller="Home" asp-action="About">About Us</a></li>
+            </ul>
+            <ul class="actions stacked">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                <li><a asp-controller="Auth" asp-action="Login" class="button fit">Log In</a></li>
+                    <li><a asp-controller="Auth" asp-action="Register" class="button fit">Register</a></li>
+                }
+                else
+                {
+                    <li><a href="#" class="button fit">Hello, @User.Identity.Name</a></li>
+                    <li><a asp-controller="Auth" asp-action="Logout" class="button fit">Logout</a></li>
+                }
+            </ul>
+        </nav>
+        <!-- Contact -->
+        <section id="one" class="tiles">
+
+            @if (Model != null && Model.Any())
+            {
+                <div class="row">
+                    @foreach (var tech in Model)
+                    {
+                        <div class="col-md-4 mb-4">
+                            <div class="card border" style="width: 310px; height:500px;">
+                                <img src="@tech.ImageUrl" class="card-img-top" alt="..." style="height: 300px; width: 300px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">@tech.Title</h5>
+                                    <p class="card-text" style="color:white">
+                                        @Html.Raw(Html.Encode(tech.Description.Length > 100 ? tech.Description.Substring(0, 100) + "..." : tech.Description))
+                                    </p>
+                                    <!-- Buttons -->
+                                    <a asp-action="techDetails" asp-route-id="@tech.Id" class="btn btn-primary btn-sm">Read More</a>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <ul class="navbar-nav me-auto">
+                                            @if (User.IsInRole("ADMIN"))
+                                            {
+                                                <a href="@Url.Action("DeleteTech", "Tech", new { techId = tech.Id })" class="deletetech-link btn btn-danger">Delete</a>
+
+                                            }
+                                        </ul>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
-            </div>
-        }
+
+                <div class="d-flex justify-content-center mt-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            @if (Model.HasPreviousPage)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=@(Model.PageIndex - 1)" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item disabled">
+                                    <span class="page-link" aria-hidden="true">&laquo;</span>
+                                </li>
+                            }
+
+                            @for (int i = 1; i <= Model.TotalPages; i++)
+                            {
+                                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                                    <a class="page-link" href="?page=@i">@i</a>
+                                </li>
+                            }
+
+                            @if (Model.HasNextPage)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=@(Model.PageIndex + 1)" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item disabled">
+                                    <span class="page-link" aria-hidden="true">&raquo;</span>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            }
+            else
+            {
+                <p>Please Login First!!</p>
+            }
+        </section>
+        
+        <script src="~/assets/js/jquery.min.js"></script>
+        <script src="~/assets/js/jquery.scrolly.min.js"></script>
+        <script src="~/assets/js/jquery.scrollex.min.js"></script>
+        <script src="~/assets/js/browser.min.js"></script>
+        <script src="~/assets/js/breakpoints.min.js"></script>
+        <script src="~/assets/js/util.js"></script>
+        <script src="~/assets/js/main.js"></script>
     </div>
-</div>
 
+</body>
 
-
-@* <div class="col-md-4">
-    <div class="card" style="width: 15rem; height: fit-content">
-        <img src="@tech.ImageUrl" class="card-img-top" alt="...">
-        <h6 class="card-title">@tech.Title</h6>
-        <div class="card-body">
-            <p class="card-text">@tech.Description</p>
-            <a asp-route="techDetailsRoute" asp-route-id="@tech.Id" class="btn btn-primary">Read More...</a>
-        </div>
-    </div>
-</div> *@
+</html>

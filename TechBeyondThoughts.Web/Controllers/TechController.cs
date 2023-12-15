@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 using TechBeyondThoughts.Web.Models;
 using TechBeyondThoughts.Web.Service;
 
@@ -14,27 +13,64 @@ namespace TechBeyondThoughts.Web.Controllers
         {
             _techService = techService;
         }
-        public async Task<IActionResult> TechIndex()
+       
+        public async Task<IActionResult> TechIndex(int? page)
         {
-            List<TechDataDto>? list = new();
-            ResponceDto? responce = await _techService.GetAllTechAsync();
+            int pageSize = 3; // Set the desired page size
+
+            ResponceDto? response = await _techService.GetAllTechAsync();
+
+            if (response != null && response.IsSuccess)
+            {
+                var techList = JsonConvert.DeserializeObject<List<TechDataDto>>(Convert.ToString(response.Result));
+
+                var paginatedList = PaginatedList<TechDataDto>.Create(techList, page ?? 1, pageSize);
+
+                return View(paginatedList);
+            }
+            else
+            {
+                TempData["error"] = response?.Message;
+                return View();
+            }
+        }
+        /************************************/
+        public async Task<IActionResult> techDetails(int id)
+        {
+            TechDataDto? model = new();
+            ResponceDto? responce = await _techService.GetTechByIdAsync(id);
 
             if (responce != null && responce.IsSuccess)
             {
-                list = JsonConvert.DeserializeObject<List<TechDataDto>>(Convert.ToString(responce.Result));
-
+                model = JsonConvert.DeserializeObject<TechDataDto>(Convert.ToString(responce.Result));
             }
-            else {
+            else
+            {
                 TempData["error"] = responce?.Message;
             }
-            return View(list);
+            return View(model);
+        }
+        public IActionResult Search(string Keyword)
+        {
+            List<TechDataDto> models = null;
+
+            ResponceDto responce = _techService.SearchTechByNameAsync(Keyword).Result;
+
+            if (responce != null && responce.IsSuccess)
+            {
+                models = JsonConvert.DeserializeObject<List<TechDataDto>>(Convert.ToString(responce.Result));
+            }
+            else
+            {
+                TempData["error"] = responce?.Message;
+            }
+
+            return View(models);
         }
 
-       /* public async Task<IActionResult> CreateTech()
-        {
-            
-            return View();
-        }*/
+
+
+
 
         public async Task<IActionResult> CreateTech(TechDataDto model)
         {
@@ -54,7 +90,8 @@ namespace TechBeyondThoughts.Web.Controllers
             }
             return View(model);
         }
-
+       
+        [HttpGet]
         public async Task<IActionResult> DeleteTech(int techId)
         {
             ResponceDto? responce = await _techService.GetTechByIdAsync(techId);
@@ -70,19 +107,37 @@ namespace TechBeyondThoughts.Web.Controllers
             }
             return NotFound();
         }
-        [HttpPost]
-        public async Task<IActionResult> DeleteTech(TechDataDto techDataDto)
+        [HttpPost, ActionName("DeleteTech")]
+        public async Task<IActionResult> DeleteConfirmed(int techId)
         {
-            ResponceDto? responce = await _techService.DeleteTechAsync(techDataDto.Id);
-            if (responce != null && responce.IsSuccess)
+            try
             {
+                ResponceDto? responce = await _techService.DeleteTechAsync(techId);
+
+                if (responce != null && responce.IsSuccess)
+                {
+                    // Redirect to TechIndex upon successful deletion
+                    return RedirectToAction(nameof(TechIndex));
+                }
+                else
+                {
+                    TempData["error"] = responce?.Message;
+                }
+
+                // If the deletion was not successful, redirect to a suitable action
                 return RedirectToAction(nameof(TechIndex));
             }
-            else
+            catch (Exception ex)
             {
-                TempData["error"] = responce?.Message;
+                // Log the exception for debugging purposes
+
+                ModelState.AddModelError(string.Empty, "An error occurred while deleting the technology. Please try again.");
+                // Redirect to a suitable action
+                return RedirectToAction(nameof(TechIndex));
             }
-            return View(techDataDto);
         }
+
+
+
     }
 }

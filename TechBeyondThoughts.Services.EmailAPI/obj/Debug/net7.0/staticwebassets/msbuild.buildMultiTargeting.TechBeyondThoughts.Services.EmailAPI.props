@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TechBeyondThoughts.Services.EmailAPI.props" />
+</Project>

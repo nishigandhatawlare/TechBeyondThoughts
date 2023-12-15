@@ -5,20 +5,25 @@
             <h1>Login</h1>
         </div>
         <div class="row text-center">
-            <div asp-validation-summary="All" class="text-danger">
-            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
             <div class="row">
                 <div class="col-6 offset-3 pb-2">
-                    <input asp-for="Username" class="form-control" placeholder="UserName">
+                    <label asp-for="Username"></label>
+                    <input asp-for="Username" class="form-control" placeholder="UserName" data-val="true" data-val-required="Username is required">
+                    <span asp-validation-for="Username" class="text-danger"></span>
                 </div>
                 <div class="col-6 offset-3 pb-2">
-                    <input asp-for="Password" class="form-control" placeholder="Password">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Password" data-val="true" data-val-required="Password is required">
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                 <div class="col-6 offset-3 pb-2">
                     <button type="submit" class="form-control btn btn-success" value="Submit">Login</button>
-
                 </div>
             </div>
         </div>
     </div>
 </form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

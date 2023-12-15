@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Auth/Logout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,16 +28,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Home/Faq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYXEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Home/LandingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMYW5kaW5nUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Home/techDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0ZWNoRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Shared/_CustomLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DdXN0b21MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Shared/_Notifications.cshtml]
@@ -58,6 +74,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Tech/DeleteTech.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxEZWxldGVUZWNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Tech/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Tech/techDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFx0ZWNoRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Tech/TechIndex.cshtml]

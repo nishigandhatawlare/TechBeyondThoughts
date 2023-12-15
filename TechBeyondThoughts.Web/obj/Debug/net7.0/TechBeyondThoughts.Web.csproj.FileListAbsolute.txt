@@ -31,3 +31,13 @@ D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\refint\TechBeyondT
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.pdb
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\TechBeyondThoughts.Web.genruntimeconfig.cache
 D:\TechBeyondThoughts\TechBeyondThoughts.Web\obj\Debug\net7.0\ref\TechBeyondThoughts.Web.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\MailKit.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\MimeKit.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Web\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll

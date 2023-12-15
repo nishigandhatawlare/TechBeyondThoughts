@@ -25,9 +25,9 @@ namespace TechBeyondThoughts.Web.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = SD.TechAPIBase + "/api/tech/" + id
+                Url = $"{SD.TechAPIBase}/api/tech/id:int?id={id}"
             }
-                       );
+            );
         }
         public async Task<ResponceDto?> GetAllTechAsync()
         {
@@ -47,22 +47,31 @@ namespace TechBeyondThoughts.Web.Service
             }
             );
         }
-        public async Task<ResponceDto?> GetTechByIdAsync(int id)
+        public async Task<ResponceDto?> GetTechByIdAsync(int techId)
         {
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.TechAPIBase + "/api/tech/" + id
-            }
-           );
+                Url = $"{SD.TechAPIBase}/api/tech/id:int?id={techId}"
+            });
         }
+
+        public async Task<ResponceDto?> SearchTechByNameAsync(string keyword)
+        {
+            return await _baseService.SendAsync(new RequestDto()
+            {
+                ApiType = SD.ApiType.GET,
+                Url = $"{SD.TechAPIBase}/api/tech/GetByName/{Uri.EscapeDataString(keyword)}"
+            });
+        }
+
         public async Task<ResponceDto?> UpdateTechAsync(TechDataDto techDataDto)
         {
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.PUT,
                 Data = techDataDto,
-                Url = SD.TechAPIBase + "/api/coupon"
+                Url = SD.TechAPIBase + "/api/tech"
             }
                         );
         }

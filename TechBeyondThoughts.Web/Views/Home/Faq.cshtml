@@ -1,0 +1,99 @@
+﻿@{
+	ViewData["Title"] = "Contact Us";
+	Layout = null; // Disable layout for this view
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/css/main.css" />
+	<noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+	<div id="wrapper">
+		<header id="header" class="alt">
+			<a asp-controller="Home" asp-action="Index" class="logo">
+				<strong>TechBeyondThoughts</strong>
+			</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+		<nav id="menu">
+			<ul class="links">
+				<li><a asp-controller="Home" asp-action="Index">Home</a></li>
+				<li><a asp-controller="Home" asp-action="LandingPage">Landing</a></li>
+				<li><a asp-controller="Tech" asp-action="TechIndex">Explore</a></li>
+				<li><a asp-controller="Home" asp-action="About">About Us</a></li>
+			</ul>
+			<ul class="actions stacked">
+				@if (!User.Identity.IsAuthenticated)
+				{
+					<li><a asp-controller="Auth" asp-action="Login" class="button fit">Log In</a></li>
+					<li><a asp-controller="Auth" asp-action="Register" class="button fit">Register</a></li>
+				}
+				else
+				{
+					<li><a href="#" class="button fit">Hello, @User.Identity.Name</a></li>
+					<li><a asp-controller="Auth" asp-action="Logout" class="button fit">Logout</a></li>
+				}
+			</ul>
+		</nav>
+		<!-- FAQ's -->
+		<section id="two">
+			<div class="inner">
+			<header class="major">
+			<h2>Frequently Asked Questions</h2>
+			</header>
+			<section>
+				<h3>Question 1: What is Techbeyondthoughts?</h3>
+				<p>Answer 1: Techbeyondthoughts is a technology-focused platform that explores innovative ideas and solutions in the tech landscape.</p>
+			</section>
+
+			<section>
+				<h3>Question 2: How can I stay updated on the latest tech news?</h3>
+				<p>Answer 2: You can stay informed by regularly checking our website for the latest articles, news, and updates. Additionally, subscribe to our newsletter for email notifications.</p>
+			</section>
+
+			<section>
+				<h3>Question 3: Can I contribute by writing a tech blog?</h3>
+				<p>Answer 3: Absolutely! We welcome contributions from the tech community. Feel free to contact us through our "Get in Touch" section to submit your ideas or articles.</p>
+			</section>
+
+			<section>
+				<h3>Question 4: Is Techbeyondthoughts free to use?</h3>
+				<p>Answer 4: Yes, Techbeyondthoughts is a free platform for users. You can explore our content, read articles, and engage with the tech community without any charges.</p>
+			</section>
+
+			<section>
+				<h3>Question 5: How do I report technical issues on the website?</h3>
+				<p>Answer 5: If you encounter any technical issues or bugs, please use our "Contact" page to report the problem. Our support team will investigate and address the issue promptly.</p>
+			</section>
+			</div>
+		</section>
+	</div>
+
+		<!-- End FAQ's -->
+
+
+		<footer class="footer text-muted">
+			<div class="text-center">
+				&copy; 2023 - TechBeyondThoughts.Web
+			</div>
+		</footer>
+		<script src="~/assets/js/jquery.min.js"></script>
+		<script src="~/assets/js/jquery.scrolly.min.js"></script>
+		<script src="~/assets/js/jquery.scrollex.min.js"></script>
+		<script src="~/assets/js/browser.min.js"></script>
+		<script src="~/assets/js/breakpoints.min.js"></script>
+		<script src="~/assets/js/util.js"></script>
+		<script src="~/assets/js/main.js"></script>
+	</div>
+
+</body>
+</html>

@@ -6,9 +6,11 @@ namespace TechBeyondThoughts.Web.Service
     {
         Task<ResponceDto?> GetTechAsync(string title);
         Task<ResponceDto?> GetAllTechAsync();
-        Task<ResponceDto?> GetTechByIdAsync(int id);
+        Task<ResponceDto?> GetTechByIdAsync(int techId);
         Task<ResponceDto?> CreateTechAsync(TechDataDto techDataDto);
         Task<ResponceDto?> UpdateTechAsync(TechDataDto techDataDto);
         Task<ResponceDto?> DeleteTechAsync(int id);
+        Task<ResponceDto?> SearchTechByNameAsync(string keyword);
+
     }
 }

@@ -1,0 +1,21 @@
+﻿@model TechDataDto
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 mt-4">
+            <div class="card" style="border-color: white;">
+                <!-- Display individual technology information here -->
+                <img src="@Model.ImageUrl" class="card-img-top" alt="Technology Image" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h2 class="card-title" style="color: white;">@Model.Title</h2>
+                    <p class="card-text" style="color: white;"><strong>Category:</strong> @Model.Category</p>
+                    <p class="card-text" style="color: white;"><strong>Inventor's Name:</strong> @Model.InventorName</p>
+                    <p class="card-text" style="color: white;"><strong>Invention Date:</strong> @Model.InventionDate.ToString("yyyy-MM-dd")</p>
+                    <p class="card-text" style="color: white;"><strong>Description:</strong> @Model.Description</p>
+
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to All Technologies</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

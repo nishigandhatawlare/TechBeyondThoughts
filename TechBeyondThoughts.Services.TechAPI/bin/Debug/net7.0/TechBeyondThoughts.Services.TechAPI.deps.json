@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.12",
           "Microsoft.AspNetCore.OpenApi": "7.0.10",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
@@ -83,6 +84,17 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.12": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.24.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "7.0.12.0",
+            "fileVersion": "7.0.1223.47922"
           }
         }
       },
@@ -695,6 +707,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KlSupL6h5oUwjMAoNJO2vp0MrqGYeO6nfdGjAEriK8xUccQndmQW9zQwF7d1R80abrZD/T9b01hmhk3v3LX05g==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/7.0.12",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.7.0.12.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/7.0.10": {
       "type": "package",

@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechBeyondThoughts.Services
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechBeyondThoughts.Web", "TechBeyondThoughts.Web\TechBeyondThoughts.Web.csproj", "{924C731C-D9CA-4EEF-A9AC-0521E25806CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechBeyondThoughts.Services.AuthAPI", "TechBeyondThoughts.Services.AuthAPI\TechBeyondThoughts.Services.AuthAPI.csproj", "{8CDC6333-513A-4CD3-82A2-64DD6B5B60A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechBeyondThoughts.Services.AuthAPI", "TechBeyondThoughts.Services.AuthAPI\TechBeyondThoughts.Services.AuthAPI.csproj", "{8CDC6333-513A-4CD3-82A2-64DD6B5B60A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

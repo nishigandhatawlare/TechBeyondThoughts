@@ -124,3 +124,24 @@ label {
         margin: 20px;
     }
 }
+.about-us {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: animate__fadeInDown;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: animate__fadeInUp;
+}
+
+.textp p {
+    font-size: 1.2em;
+    animation: animate__fadeInLeft;
+}
