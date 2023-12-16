@@ -49,18 +49,6 @@ namespace TechBeyondThoughts.Web.Controllers
         }
 
         [HttpGet]
-		/*public IActionResult Register()
-		{
-			var roleList = new List<SelectListItem>()
-			{
-				new SelectListItem{ Text = SD.RoleAdmin, Value = SD.RoleCustomer},
-                new SelectListItem{ Text = SD.RoleCustomer, Value = SD.RoleCustomer},
-
-            };
-			ViewBag.RoleList = roleList;
-			return View();
-		}*/
-
 		public IActionResult Register()
 		{
 			var roleList = new List<SelectListItem>()

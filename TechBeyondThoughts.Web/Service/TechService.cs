@@ -65,15 +65,15 @@ namespace TechBeyondThoughts.Web.Service
             });
         }
 
-        public async Task<ResponceDto?> UpdateTechAsync(TechDataDto techDataDto)
+        public async Task<ResponceDto?> UpdateTechAsync(int techId, TechDataDto techDataDto)
         {
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.PUT,
                 Data = techDataDto,
-                Url = SD.TechAPIBase + "/api/tech"
-            }
-                        );
+                Url = $"{SD.TechAPIBase}/api/tech/{techId}"
+            });
         }
+
     }
 }

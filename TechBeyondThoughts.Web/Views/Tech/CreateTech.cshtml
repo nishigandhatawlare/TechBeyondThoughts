@@ -1,55 +1,157 @@
 ﻿@model TechDataDto
-<div class="formContainer">
 
-        <form asp-action="CreateTech">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Title">Title:</label>
-                <input asp-for="Title" type="text" class="form-control" id="title" placeholder="Enter technology title" required>
-                <span asp-validation-for="Title" class="text-danger"></span>
+
+
+@* ******************************************************** *@
+
+@{
+    ViewData["Title"] = "Contact Us";
+    Layout = null; // Disable layout for this view
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Techbeyondthoughts - Technologies Beyond Thoughts</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="~/dist/css/style.css">
+    <link rel="stylesheet" href="~/css/main.css" />
+	<link href="~/css/create.css" rel="stylesheet" />
+    <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap">
+        <header id="header" class="alt">
+            <a asp-controller="Home" asp-action="Index" class="logo">
+                <strong>TechBeyondThoughts</strong>
+            </a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+        <nav id="menu">
+            <ul class="links">
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="LandingPage">Landing</a></li>
+                <li><a asp-controller="Tech" asp-action="TechIndex">Explore</a></li>
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    @if (User.IsInRole("ADMIN"))
+                    {
+                        <li><a class="nav-link" asp-controller="Tech" asp-action="CreateTech">Create</a></li>
+                    }
+
+                }
+                <li><a asp-controller="Home" asp-action="About">About Us</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                <li><a asp-controller="Home" asp-action="Faq">FAQ's</a></li>
+
+
+            </ul>
+            <ul class="actions stacked">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <li><a asp-controller="Auth" asp-action="Login" class="button fit">Log In</a></li>
+                    <li><a asp-controller="Auth" asp-action="Register" class="button fit">Register</a></li>
+                }
+                else
+                {
+                    <li><a href="#" class="button fit">Hello, @User.Identity.Name</a></li>
+                    <li><a asp-controller="Auth" asp-action="Logout" class="button fit">Logout</a></li>
+                }
+            </ul>
+        </nav>
+        <main>
+            @* main section here *@
+            <div class="formContainerr">
+
+                <form asp-action="CreateTech">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Title">Title:</label>
+                        <input asp-for="Title" type="text" class="form-control" id="title" placeholder="Enter technology title" required>
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Description">Description:</label>
+                        <textarea asp-for="Description" class="form-control" id="description" rows="4" placeholder="Enter technology description" required></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Category">Category:</label>
+                        <input type="text" asp-for="Category" class="form-control" id="category" placeholder="Enter technology category" required>
+                        <span asp-validation-for="Category" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="InventorName">Inventor's Name:</label>
+                        <input type="text" asp-for="InventorName" class="form-control" id="inventorName" placeholder="Enter inventor's name" required>
+                        <span asp-validation-for="InventorName" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="InventionDate">Invention Date:</label>
+                        <input type="date" asp-for="InventionDate" style="background-color:black" class="form-control" id="inventionDate" required>
+                        <span asp-validation-for="InventionDate" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ImageUrl">Image URL:</label>
+                        <input type="url" asp-for="ImageUrl" class="form-control" id="imageUrl" placeholder="Enter image URL" required>
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Technology</button>
+
+                </form>
+                <br>
+
             </div>
 
-            <div class="form-group">
-                <label asp-for="Description">Description:</label>
-                <textarea asp-for="Description" class="form-control" id="description" rows="4" placeholder="Enter technology description" required></textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
 
+            @* main section end *@
+
+        </main>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="#">
+                            <img class="header-logo-image" src="~/dist/images/logo.svg" alt="Techbeyondthoughts Logo">
+                        </a>
+                    </div>
+                    <div class="footer-copyright">&copy; @DateTime.Now.Year Techbeyondthoughts, all rights reserved</div>
+                </div>
             </div>
+        </footer>
+    </div>
 
-            <div class="form-group">
-                <label asp-for="Category">Category:</label>
-                <input type="text" asp-for="Category" class="form-control" id="category" placeholder="Enter technology category" required>
-                <span asp-validation-for="Category" class="text-danger"></span>
-
-            </div>
-
-            <div class="form-group">
-                <label asp-for="InventorName">Inventor's Name:</label>
-                <input type="text" asp-for="InventorName" class="form-control" id="inventorName" placeholder="Enter inventor's name" required>
-                <span asp-validation-for="InventorName" class="text-danger"></span>
-
-            </div>
-
-            <div class="form-group">
-                <label asp-for="InventionDate">Invention Date:</label>
-                <input type="date" asp-for="InventionDate" class="form-control" id="inventionDate" required>
-                <span asp-validation-for="InventionDate" class="text-danger"></span>
-
-            </div>
-
-            <div class="form-group">
-                <label asp-for="ImageUrl">Image URL:</label>
-                <input type="url" asp-for="ImageUrl" class="form-control" id="imageUrl" placeholder="Enter image URL" required>
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
-
-            </div>
-
-            <button type="submit" class="btn btn-primary">Add Technology</button>
-        
-        </form>
-        <br>
-
-</div>
+    <script src="~/dist/js/main.min.js"></script>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.scrolly.min.js"></script>
+    <script src="~/assets/js/jquery.scrollex.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+</html>
+@* ******************************************************** *@
 
     @section Scripts{
     <partial name="_ValidationScriptsPartial" />

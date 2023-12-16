@@ -1,0 +1,13 @@
+﻿.formContainerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+    .formContainerr form {
+        width: 950px;
+        max-width: 100%;
+        margin-top: 50px; /* Add margin from the top */
+        margin-left: 50px; /* Add margin from the top */
+    }

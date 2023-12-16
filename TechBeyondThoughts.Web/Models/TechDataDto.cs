@@ -6,8 +6,9 @@ namespace TechBeyondThoughts.Web.Models
     {
        
         public int Id { get; set; } // Unique identifier for each technology
-       
+        [Required(ErrorMessage = "Title is required")]
         public string? Title { get; set; } // Title of the technology (e.g., "Artificial Intelligence")
+        [Required(ErrorMessage = "Description is required")]
 
         public string? Description { get; set; } // Brief description of the technology
 

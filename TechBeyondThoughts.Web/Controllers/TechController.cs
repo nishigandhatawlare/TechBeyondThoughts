@@ -13,11 +13,13 @@ namespace TechBeyondThoughts.Web.Controllers
         {
             _techService = techService;
         }
-       
+
         public async Task<IActionResult> TechIndex(int? page)
         {
             int pageSize = 3; // Set the desired page size
 
+            // Retrieve success message from TempData
+           
             ResponceDto? response = await _techService.GetAllTechAsync();
 
             if (response != null && response.IsSuccess)
@@ -34,6 +36,7 @@ namespace TechBeyondThoughts.Web.Controllers
                 return View();
             }
         }
+
         /************************************/
         public async Task<IActionResult> techDetails(int id)
         {
@@ -116,6 +119,8 @@ namespace TechBeyondThoughts.Web.Controllers
 
                 if (responce != null && responce.IsSuccess)
                 {
+                    TempData["success"] = "Technology Deleted Successfully!";
+
                     // Redirect to TechIndex upon successful deletion
                     return RedirectToAction(nameof(TechIndex));
                 }
@@ -136,6 +141,62 @@ namespace TechBeyondThoughts.Web.Controllers
                 return RedirectToAction(nameof(TechIndex));
             }
         }
+        [HttpGet]
+        public async Task<IActionResult> EditTech(int techId)
+        {
+            ResponceDto? responce = await _techService.GetTechByIdAsync(techId);
+
+            if (responce != null && responce.IsSuccess)
+            {
+                TechDataDto? model = JsonConvert.DeserializeObject<TechDataDto>(Convert.ToString(responce.Result));
+
+                // Set the Id property before passing it to the view
+                model.Id = techId;
+
+                return View(model);
+            }
+            else
+            {
+                TempData["error"] = responce?.Message;
+                return NotFound();
+            }
+        }
+
+
+        [HttpPost, ActionName("EditTech")]
+        public async Task<IActionResult> EditConfirmed(TechDataDto techData)
+        {
+            try
+            {
+                // Assuming you have access to ITechService through dependency injection
+                ResponceDto? response = await _techService.UpdateTechAsync(techData.Id, techData);
+
+                if (response != null && response.IsSuccess)
+                {
+                    TempData["success"] = "Technology Updated Successfully!";
+
+                    // Redirect to TechIndex upon successful update
+                    return RedirectToAction(nameof(TechIndex));
+
+                }
+                else
+                {
+                    TempData["error"] = response?.Message;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the exception for debugging purposes
+                ModelState.AddModelError(string.Empty, "An error occurred while updating the technology. Please try again.");
+
+                // Return to the edit view with the provided techData object
+                return View("EditTech", techData);
+            }
+
+            // If the update was not successful, return to the edit view with the provided techData object
+            return View("EditTech", techData);
+        }
+
 
 
 

@@ -33,12 +33,20 @@
       "PackagePath": "staticwebassets\\assets\\js\\util.js"
     },
     {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\Register.css",
+      "PackagePath": "staticwebassets\\css\\Register.css"
+    },
+    {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\StyleSheet.css",
       "PackagePath": "staticwebassets\\css\\StyleSheet.css"
     },
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\create.css",
+      "PackagePath": "staticwebassets\\css\\create.css"
     },
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\font-awesome.min.css",
@@ -51,6 +59,10 @@
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\landing-page.css",
       "PackagePath": "staticwebassets\\css\\landing-page.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\main.css",
@@ -163,6 +175,10 @@
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\client2.jpg",
       "PackagePath": "staticwebassets\\images\\client2.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\downArrow.png",
+      "PackagePath": "staticwebassets\\images\\downArrow.png"
     },
     {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\favicon.png",

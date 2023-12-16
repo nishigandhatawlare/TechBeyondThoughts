@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MDfwZ/2pk8qThnyNlTXfQqdjQ9vW0Y90uSsS5qVGKnI=",
+  "Hash": "hAO560n6ieTTTUPUrbKcoLUN72tbMvq0ztZBgiwdCEk=",
   "Source": "TechBeyondThoughts.Web",
   "BasePath": "_content/TechBeyondThoughts.Web",
   "Mode": "Default",
@@ -187,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
+      "Identity": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\create.css",
+      "SourceId": "TechBeyondThoughts.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\",
+      "BasePath": "_content/TechBeyondThoughts.Web",
+      "RelativePath": "css/create.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\create.css"
+    },
+    {
       "Identity": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\font-awesome.min.css",
       "SourceId": "TechBeyondThoughts.Web",
       "SourceType": "Discovered",
@@ -238,6 +255,23 @@
       "OriginalItemSpec": "wwwroot\\css\\landing-page.css"
     },
     {
+      "Identity": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\login.css",
+      "SourceId": "TechBeyondThoughts.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\",
+      "BasePath": "_content/TechBeyondThoughts.Web",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
       "Identity": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\main.css",
       "SourceId": "TechBeyondThoughts.Web",
       "SourceType": "Discovered",
@@ -270,6 +304,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\noscript.css"
+    },
+    {
+      "Identity": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\Register.css",
+      "SourceId": "TechBeyondThoughts.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\",
+      "BasePath": "_content/TechBeyondThoughts.Web",
+      "RelativePath": "css/Register.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Register.css"
     },
     {
       "Identity": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\responsive.css",
@@ -729,6 +780,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\client2.jpg"
+    },
+    {
+      "Identity": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\downArrow.png",
+      "SourceId": "TechBeyondThoughts.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\",
+      "BasePath": "_content/TechBeyondThoughts.Web",
+      "RelativePath": "images/downArrow.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\downArrow.png"
     },
     {
       "Identity": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\images\\favicon.png",

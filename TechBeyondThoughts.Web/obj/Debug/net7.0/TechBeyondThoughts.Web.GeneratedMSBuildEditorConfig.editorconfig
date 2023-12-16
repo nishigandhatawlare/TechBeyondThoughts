@@ -76,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxEZWxldGVUZWNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Tech/EditTech.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxFZGl0VGVjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Tech/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

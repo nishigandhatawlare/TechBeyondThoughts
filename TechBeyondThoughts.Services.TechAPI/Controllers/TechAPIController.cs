@@ -105,15 +105,26 @@ namespace TechBeyondThoughts.Services.TechAPI.Controllers
         }
         [HttpPut]
         [Authorize(Roles = "ADMIN")]
-        public ResponceDto Put([FromBody] TechDataDto techdataDto)
+        [Route("{id:int}")]
+        public ResponceDto Put(int id, [FromBody] TechDataDto techdataDto)
         {
             try
             {
-                TechData objList = _mapper.Map<TechData>(techdataDto);
+                TechData objList = _db.Techstacks.FirstOrDefault(u => u.Id == id);
+
+                if (objList == null)
+                {
+                    _responce.IsSuccess = false;
+                    _responce.Message = "Resource not found";
+                    return _responce;
+                }
+
+                _mapper.Map(techdataDto, objList);
+
                 _db.Techstacks.Update(objList);
                 _db.SaveChanges();
-                _responce.Result = _mapper.Map<TechDataDto>(objList);
 
+                _responce.Result = _mapper.Map<TechDataDto>(objList);
             }
             catch (Exception ex)
             {
@@ -122,6 +133,9 @@ namespace TechBeyondThoughts.Services.TechAPI.Controllers
             }
             return _responce;
         }
+
+
+
 
         [HttpDelete]
         [Authorize(Roles = "ADMIN")]
@@ -142,5 +156,7 @@ namespace TechBeyondThoughts.Services.TechAPI.Controllers
             }
             return _responce;
         }
+
+
     }
 }

@@ -5,9 +5,7 @@
 
 
     <div id="categorySuggestions" style="display: none;">
-        <!-- Suggestions will be displayed here -->
     </div>
-
     @if (Model != null && Model.Count > 0)
     {
         <div class="row">
@@ -18,7 +16,6 @@
                         <img src="@tech.ImageUrl" class="img-fluid" alt="Technology Image" style="width: 100%; height: 200px; object-fit: cover;">
                         <div class="blog-post-content" style="padding: 10px;">
                             <h2 class="blog-post-title" style="color: white; font-size: 1.5rem;">@tech.Title</h2>
-
                             <p class="card-text" style="color: white; font-size: 0.9rem;">
                                 @Html.Raw(Html.Encode(tech.Description.Length > 80 ? tech.Description.Substring(0, 80) + "..." : tech.Description))
                             </p>

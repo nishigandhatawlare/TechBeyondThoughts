@@ -1,0 +1,43 @@
+﻿@model TechDataDto
+
+<form asp-action="EditTech" method="post">
+    <input asp-for="Id" type="hidden" />
+
+    <div class="form-group">
+        <label asp-for="Title">Title:</label>
+        <input asp-for="Title" type="text" class="form-control" id="title" required>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Description:</label>
+        <textarea asp-for="Description" class="form-control" id="description" rows="4" required></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Category">Category:</label>
+        <input asp-for="Category" type="text" class="form-control" id="category" placeholder="Enter technology category" required>
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="InventorName">Inventor's Name:</label>
+        <input asp-for="InventorName" type="text" class="form-control" id="inventorName" placeholder="Enter inventor's name" required>
+        <span asp-validation-for="InventorName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="InventionDate">Invention Date:</label>
+        <input asp-for="InventionDate" type="date" class="form-control" id="inventionDate" required>
+        <span asp-validation-for="InventionDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageUrl">Image URL:</label>
+        <input asp-for="ImageUrl" type="url" class="form-control" id="imageUrl" placeholder="Enter image URL" required>
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Technology</button>
+</form>
