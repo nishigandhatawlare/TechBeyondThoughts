@@ -6,17 +6,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>LoginForm</title>
+<partial name="_header"></partial>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="~/css/login.css" rel="stylesheet" />
-
-</head>
 <body>
     <div class="background">
         <div class="shape"></div>
@@ -43,9 +34,8 @@
         <a class="nav-link" asp-controller="Auth" asp-action="Register">Register</a>
 
     </form>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <partial name="_jsfiles"></partial>
+
 </body>
 </html>
 @section Scripts {

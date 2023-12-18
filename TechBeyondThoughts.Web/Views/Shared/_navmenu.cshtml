@@ -1,0 +1,34 @@
+﻿<nav id="menu">
+    <ul class="links">
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Home" asp-action="LandingPage">Landing</a></li>
+        <li><a asp-controller="Tech" asp-action="TechIndex">Explore</a></li>
+        @if (User.Identity.IsAuthenticated)
+        {
+
+            @if (User.IsInRole("ADMIN"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Tech" asp-action="CreateTech">Create</a>
+                </li>
+            }
+        }
+        <!-- Add more navigation links as needed -->
+        <li><a asp-controller="Home" asp-action="About">About Us</a></li>
+        <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+        <li><a asp-controller="Home" asp-action="Faq">FAQ's</a></li>
+    </ul>
+
+    <ul class="actions stacked">
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <li><a asp-controller="Auth" asp-action="Login" class="button fit">Log In</a></li>
+            <li><a asp-controller="Auth" asp-action="Register" class="button fit">Register</a></li>
+        }
+        else
+        {
+            <li><a href="#" class="button fit">Hello, @User.Identity.Name</a></li>
+            <li><a asp-controller="Auth" asp-action="Logout" class="button fit">Logout</a></li>
+        }
+    </ul>
+</nav>

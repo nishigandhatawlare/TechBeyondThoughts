@@ -7,25 +7,7 @@
 
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Techbeyondthoughts - Technologies Beyond Thoughts</title>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
-    <link rel="stylesheet" href="~/dist/css/style.css">
-    <link rel="stylesheet" href="~/css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
-    <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
-    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy8RBzoZNPZ9p4FfF5c9lvoG99bC2ByQ5b" crossorigin="anonymous">
-</head>
+    <partial name="_head"></partial>
 <body class="is-boxed has-animations">
 
     @if (TempData["error"] != null)
@@ -50,41 +32,8 @@
                 <a href="#menu">Menu</a>
             </nav>
         </header>
-        <nav id="menu">
-            <ul class="links">
-                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                <li><a asp-controller="Home" asp-action="LandingPage">Landing</a></li>
-                <li><a asp-controller="Tech" asp-action="TechIndex">Explore</a></li>
-                @if (User.Identity.IsAuthenticated)
-                {
-
-                    @if (User.IsInRole("ADMIN"))
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Tech" asp-action="CreateTech">Create</a>
-                        </li>
-                    }
-                }
-                <!-- Add more navigation links as needed -->
-                <li><a asp-controller="Home" asp-action="About">About Us</a></li>
-                <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
-                <li><a asp-controller="Home" asp-action="Faq">FAQ's</a></li>
-            </ul>
-
-            <ul class="actions stacked">
-                @if (!User.Identity.IsAuthenticated)
-                {
-                    <li><a asp-controller="Auth" asp-action="Login" class="button fit">Log In</a></li>
-                    <li><a asp-controller="Auth" asp-action="Register" class="button fit">Register</a></li>
-                }
-                else
-                {
-                    <li><a href="#" class="button fit">Hello, @User.Identity.Name</a></li>
-                    <li><a asp-controller="Auth" asp-action="Logout" class="button fit">Logout</a></li>
-                }
-            </ul>
-        </nav>
-        <main>
+<partial name="_navmenu"></partial>
+<main>
             <section class="features section">
                 <div class="container">
     <div class="features section">
@@ -177,18 +126,8 @@
 
             </section>
         </main>
-        <footer class="site-footer">
-            <div class="container">
-                <div class="site-footer-inner">
-                    <div class="brand footer-brand">
-                        <a href="#">
-                            <img class="header-logo-image" src="~/dist/images/logo.svg" alt="Techbeyondthoughts Logo">
-                        </a>
-                    </div>
-                    <div class="footer-copyright">&copy; @DateTime.Now.Year Techbeyondthoughts, all rights reserved</div>
-                </div>
-            </div>
-        </footer>
+<partial name="_footer"></partial>
+
     </div>
 
     <script src="~/dist/js/main.min.js"></script>
