@@ -12,10 +12,13 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<ITechService, TechService>();
 builder.Services.AddHttpClient<IAuthService, AuthService>();
 builder.Services.AddHttpClient<INewsService, NewsService>();
+builder.Services.AddHttpClient<IBookService, BookService>();
+
 
 SD.TechAPIBase = builder.Configuration["ServiceUrls:TechAPI"];
 SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPI"];
 SD.ContactAPIBase = builder.Configuration["ServiceUrls:ContactAPI"];
+SD.BookAPIBase = builder.Configuration["ServiceUrls:BookAPI"];
 
 
 builder.Services.AddScoped<ITokenProvider, TokenProvider>();
@@ -23,6 +26,7 @@ builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<ITechService, TechService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<INewsService, NewsService>();
+builder.Services.AddScoped<IBookService, BookService>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>

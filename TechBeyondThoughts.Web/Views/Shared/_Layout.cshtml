@@ -28,7 +28,11 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Tech" asp-action="TechIndex">Explore</a>
+                            <a class="nav-link" asp-area="" asp-controller="Tech" asp-action="TechIndex">Explore Tech</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Book" asp-action="BookIndex">EBookStore</a>
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {

@@ -1,0 +1,140 @@
+﻿@model PaginatedList<TechBeyondThoughts.Web.Models.BookDataDto>
+
+@{
+    ViewData["Title"] = "Contact Us";
+    Layout = null; // Disable layout for this view
+}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <partial name="_head"></partial>
+</head>
+<body class="is-boxed has-animations">
+
+    @if (TempData["error"] != null)
+    {
+        <script>
+            toastr.error('@TempData["error"]');
+        </script>
+    }
+
+    @if (TempData["success"] != null)
+    {
+        <script>
+            toastr.success('@TempData["success"]');
+        </script>
+    }
+
+    <header id="header" class="alt">
+        <a asp-controller="Home" asp-action="Index" class="logo">
+            <strong>TechBeyondThoughts</strong>
+        </a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <div class="body-wrap">
+        <main>
+            <section class="features section">
+                <div class="container">
+                    <div class="features section">
+                        @if (Model != null && Model.Any())
+                        {
+                            <div class="features-inner section-inner has-bottom-divider">
+                                <a asp-action="Create" class="btn btn-primary">Create New</a>
+
+                                <div class="row">
+                                    @foreach (var tech in Model)
+                                    {
+                                        <div class="col-md-4">
+                                            <div class="card mb-4">
+                                                <img src="@tech.ImageUrl" class="card-img-top" style="height:200px; width:200px" alt="Book Image">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">@tech.Title</h5>
+                                                    <p class="card-text">@Html.Raw(Html.Encode(tech.Description.Length > 100 ? tech.Description.Substring(0, 100) + "..." : tech.Description))</p>
+                                                    <!-- Buttons -->
+                                                    <a asp-action="techDetails" asp-route-id="@tech.BookId" class="btn btn-primary btn-sm">Read More</a>
+                                                    @if (User.Identity.IsAuthenticated)
+                                                    {
+                                                        <ul class="navbar-nav me-auto">
+                                                            @if (User.IsInRole("ADMIN"))
+                                                            {
+                                                                <a href="@Url.Action("DeleteTech", "Tech", new { bookId = tech.BookId })" class="deletetech-link btn btn-danger">Delete</a>
+                                                                <a href="@Url.Action("EditTech", "Tech", new { bookId = tech.BookId })" class="updatetech-link btn btn-danger">Update</a>
+                                                            }
+                                                        </ul>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        @if (Model.HasPreviousPage)
+                                        {
+                                            <li class="page-item">
+                                                <a class="page-link" href="?page=@(Model.PageIndex - 1)" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">&laquo;</span>
+                                            </li>
+                                        }
+
+                                        @for (int i = 1; i <= Model.TotalPages; i++)
+                                        {
+                                            <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                                                <a class="page-link" href="?page=@i">@i</a>
+                                            </li>
+                                        }
+
+                                        @if (Model.HasNextPage)
+                                        {
+                                            <li class="page-item">
+                                                <a class="page-link" href="?page=@(Model.PageIndex + 1)" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">&raquo;</span>
+                                            </li>
+                                        }
+                                    </ul>
+                                </nav>
+                            </div>
+                        }
+                        else
+                        {
+                            <p>Please Login First!!</p>
+                            <a class="nav-link" asp-controller="Auth" asp-action="Login">Login</a>
+                        }
+                    </div>
+                </div>
+            </section>
+        </main>
+        <partial name="_footer"></partial>
+    </div>
+
+    <script src="~/dist/js/main.min.js"></script>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.scrolly.min.js"></script>
+    <script src="~/assets/js/jquery.scrollex.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+</body>
+</html>

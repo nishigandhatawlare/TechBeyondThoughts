@@ -1,14 +1,11 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using Sieve.Models;
+using Sieve.Services;
 using TechBeyondThoughts.Services.TechAPI;
 using TechBeyondThoughts.Services.TechAPI.Data;
-using Sieve.Services;
-using Microsoft.Extensions.Configuration;
-using Sieve.Models;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
 using TechBeyondThoughts.Services.TechAPI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);

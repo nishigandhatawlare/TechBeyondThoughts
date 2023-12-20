@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechBeyondThoughts.Web", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechBeyondThoughts.Services.AuthAPI", "TechBeyondThoughts.Services.AuthAPI\TechBeyondThoughts.Services.AuthAPI.csproj", "{8CDC6333-513A-4CD3-82A2-64DD6B5B60A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechBeyondThoughts.Services.EBookAPI", "TechBeyondThoughts.Services.EBookAPI\TechBeyondThoughts.Services.EBookAPI.csproj", "{FB89C591-E08A-4548-A404-E5683DD4B432}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{8CDC6333-513A-4CD3-82A2-64DD6B5B60A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CDC6333-513A-4CD3-82A2-64DD6B5B60A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CDC6333-513A-4CD3-82A2-64DD6B5B60A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB89C591-E08A-4548-A404-E5683DD4B432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB89C591-E08A-4548-A404-E5683DD4B432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB89C591-E08A-4548-A404-E5683DD4B432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB89C591-E08A-4548-A404-E5683DD4B432}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{3287D0CC-F2D2-4974-9F58-9184B189A06E} = {EDBDD1EE-08BC-4FEB-9046-2E566E7105A0}
 		{924C731C-D9CA-4EEF-A9AC-0521E25806CD} = {0AB8B10D-D8B9-4AE9-9114-F6A42A651874}
 		{8CDC6333-513A-4CD3-82A2-64DD6B5B60A6} = {EDBDD1EE-08BC-4FEB-9046-2E566E7105A0}
+		{FB89C591-E08A-4548-A404-E5683DD4B432} = {EDBDD1EE-08BC-4FEB-9046-2E566E7105A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B6CC1FC-B9E7-4639-BF68-B714D0963D2D}

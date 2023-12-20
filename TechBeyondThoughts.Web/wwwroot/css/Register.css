@@ -40,7 +40,7 @@ body {
 }
 
 form {
-    height: 850px; /* Increased height */
+    height: 940px; /* Increased height */
     width: 450px; /* Increased width */
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
