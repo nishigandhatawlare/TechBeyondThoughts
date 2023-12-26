@@ -4,6 +4,5 @@
     {
         public int PagesToPreview { get; set; }
 
-       
     }
 }

@@ -91,7 +91,7 @@ namespace TechBeyondThoughts.Services.EBookAPI.Migrations
                             Format = "PDF",
                             ImageUrl = "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D",
                             Pages = 200,
-                            Published = new DateTime(2023, 12, 20, 12, 50, 15, 428, DateTimeKind.Local).AddTicks(3175),
+                            Published = new DateTime(2023, 12, 23, 12, 38, 12, 790, DateTimeKind.Local).AddTicks(1169),
                             Rating = 4.5,
                             Title = "Book 1"
                         });
@@ -112,7 +112,7 @@ namespace TechBeyondThoughts.Services.EBookAPI.Migrations
                     b.HasData(
                         new
                         {
-                            BookId = 1,
+                            BookId = 4,
                             PagesToPreview = 5
                         });
                 });
@@ -136,7 +136,7 @@ namespace TechBeyondThoughts.Services.EBookAPI.Migrations
                         new
                         {
                             BookId = 1,
-                            DownloadDateTime = new DateTime(2023, 12, 20, 12, 50, 15, 428, DateTimeKind.Local).AddTicks(3467),
+                            DownloadDateTime = new DateTime(2023, 12, 23, 12, 38, 12, 790, DateTimeKind.Local).AddTicks(1576),
                             UserId = 1
                         });
                 });

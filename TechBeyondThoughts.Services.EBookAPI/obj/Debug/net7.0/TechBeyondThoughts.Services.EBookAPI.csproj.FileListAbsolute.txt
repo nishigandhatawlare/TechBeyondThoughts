@@ -78,3 +78,5 @@ D:\TechBeyondThoughts\TechBeyondThoughts.Services.EBookAPI\obj\Debug\net7.0\refi
 D:\TechBeyondThoughts\TechBeyondThoughts.Services.EBookAPI\obj\Debug\net7.0\TechBeyondThoughts.Services.EBookAPI.pdb
 D:\TechBeyondThoughts\TechBeyondThoughts.Services.EBookAPI\obj\Debug\net7.0\TechBeyondThoughts.Services.EBookAPI.genruntimeconfig.cache
 D:\TechBeyondThoughts\TechBeyondThoughts.Services.EBookAPI\obj\Debug\net7.0\ref\TechBeyondThoughts.Services.EBookAPI.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Services.EBookAPI\bin\Debug\net7.0\Pdfium.NET.dll
+D:\TechBeyondThoughts\TechBeyondThoughts.Services.EBookAPI\bin\Debug\net7.0\PDFiumSharp.dll

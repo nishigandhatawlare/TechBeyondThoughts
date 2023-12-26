@@ -71,10 +71,6 @@ namespace TechBeyondThoughts.Web.Controllers
             return View(models);
         }
 
-
-
-
-
         public async Task<IActionResult> CreateTech(TechDataDto model)
         {
             if (ModelState.IsValid) {
@@ -161,7 +157,6 @@ namespace TechBeyondThoughts.Web.Controllers
                 return NotFound();
             }
         }
-
 
         [HttpPost, ActionName("EditTech")]
         public async Task<IActionResult> EditConfirmed(TechDataDto techData)

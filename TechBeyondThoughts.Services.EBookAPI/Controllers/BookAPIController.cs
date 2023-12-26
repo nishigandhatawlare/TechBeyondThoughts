@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Azure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Pdfium.NET;
 using Sieve.Services;
 using TechBeyondThoughts.Services.EBookAPI.Data;
 using TechBeyondThoughts.Services.EBookAPI.Models;
@@ -358,51 +360,8 @@ namespace TechBeyondThoughts.Services.EBookAPI.Controllers
             }
             return _responce;
         }
-
-        //preview
-        [HttpGet]
-        [Route("GetPreview/{bookId:int}")]
-        public ActionResult<ResponceDto> GetBookPreview(int bookId)
-        {
-            try
-            {
-                // Check if the book exists
-                BookData book = _db.Bookstacks.FirstOrDefault(b => b.BookId == bookId);
-                if (book == null)
-                {
-                    _responce.IsSuccess = false;
-                    _responce.Message = "Book not found";
-                    return NotFound(_responce);
-                }
-
-                // Log book details
-                Console.WriteLine($"Book found: {book.Title}, ID: {book.BookId}");
-
-                // Check if the book has a valid file path
-                if (string.IsNullOrWhiteSpace(book.FilePath))
-                {
-                    _responce.IsSuccess = false;
-                    _responce.Message = "Book file path not specified";
-                    return BadRequest(_responce);
-                }
-
-              
-
-                // Combine the base URL with the book's file path
-                string fullUrl = $"{book.FilePath}";
-
-                _responce.Result = fullUrl;
-                return Ok(_responce);
-            }
-            catch (Exception ex)
-            {
-                _responce.IsSuccess = false;
-                _responce.Message = ex.Message;
-                return StatusCode(500, _responce);
-            }
-        }
+       
         //download a book 
-
         [HttpGet]
         [Route("DownloadBook/{bookId:int}")]
         public IActionResult DownloadBook(int bookId)
@@ -418,12 +377,8 @@ namespace TechBeyondThoughts.Services.EBookAPI.Controllers
                     return NotFound(_responce);
                 }
 
-                // You may want to add additional logic to check if the user has permission to download the book
-
-                // Example: Get the file path or URL for the book
-                string filePath = book.FilePath;
-
-                // You may need to adjust this logic based on your storage mechanism
+                // Example: Get the full file path
+                string filePath = Path.Combine("D:\\TechBeyondThoughts\\files\\", book.FileName);
 
                 // Read the file content
                 byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
@@ -431,11 +386,8 @@ namespace TechBeyondThoughts.Services.EBookAPI.Controllers
                 // Set the content type based on the file format (e.g., application/pdf for PDF)
                 string contentType = "application/pdf"; // Adjust based on your file format
 
-                // Set the file name for the download
-                string fileName = book.FileName;
-
                 // Return the file content as a file result
-                return File(fileBytes, contentType, fileName);
+                return File(fileBytes, contentType, book.FileName);
             }
             catch (Exception ex)
             {
@@ -444,6 +396,8 @@ namespace TechBeyondThoughts.Services.EBookAPI.Controllers
                 return StatusCode(500, _responce);
             }
         }
+
+
 
 
 

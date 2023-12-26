@@ -1,0 +1,118 @@
+﻿@model TechBeyondThoughts.Web.Models.BookDataDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Book</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h4>Create Book</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <form asp-action="CreateBook" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="Title" class="control-label">Title</label>
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Author" class="control-label">Author</label>
+                        <input asp-for="Author" class="form-control" />
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Category" class="control-label">Category</label>
+                        <input asp-for="Category" class="form-control" />
+                        <span asp-validation-for="Category" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ImageUrl" class="control-label">Image URL</label>
+                        <input asp-for="ImageUrl" class="form-control" />
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Format" class="control-label">Format</label>
+                        <input asp-for="Format" class="form-control" />
+                        <span asp-validation-for="Format" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Published" class="control-label">Published</label>
+                        <input asp-for="Published" class="form-control" />
+                        <span asp-validation-for="Published" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Downloads" class="control-label">Downloads</label>
+                        <input asp-for="Downloads" class="form-control" />
+                        <span asp-validation-for="Downloads" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Pages" class="control-label">Pages</label>
+                        <input asp-for="Pages" class="form-control" />
+                        <span asp-validation-for="Pages" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label">Description</label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Rating" class="control-label">Rating</label>
+                        <input asp-for="Rating" class="form-control" />
+                        <span asp-validation-for="Rating" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="FileName" class="control-label">File Name</label>
+                        <input asp-for="FileName" class="form-control" />
+                        <span asp-validation-for="FileName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="FilePath" class="control-label">File Path</label>
+                        <input asp-for="FilePath" class="form-control" />
+                        <span asp-validation-for="FilePath" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <a asp-action="BookIndex" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    }
+</body>
+</html>

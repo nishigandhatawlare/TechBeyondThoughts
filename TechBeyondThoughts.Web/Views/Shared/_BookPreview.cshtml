@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Preview</title>
+</head>
+<body>
+    <div>
+        @if (!string.IsNullOrWhiteSpace(TempData["error"] as string))
+        {
+            <div>
+                <p>Error: @Html.Raw(TempData["error"])</p>
+            </div>
+        }
+        else
+        {
+            <!-- Use iframe for better compatibility -->
+            <iframe src="data:application/pdf;base64,@Html.Raw(ViewData["PdfContent"])" style="width: 20%; height: 600px;" frameborder="0"></iframe>
+        }
+    </div>
+</body>
+</html>

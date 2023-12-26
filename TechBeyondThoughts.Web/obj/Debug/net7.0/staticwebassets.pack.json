@@ -33,6 +33,202 @@
       "PackagePath": "staticwebassets\\assets\\js\\util.js"
     },
     {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookcss\\icomoon.css",
+      "PackagePath": "staticwebassets\\bookcss\\icomoon.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookcss\\normalize.css",
+      "PackagePath": "staticwebassets\\bookcss\\normalize.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookcss\\style.css",
+      "PackagePath": "staticwebassets\\bookcss\\style.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookcss\\vendor.css",
+      "PackagePath": "staticwebassets\\bookcss\\vendor.css"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\app-store.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\app-store.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\client-image1.png",
+      "PackagePath": "staticwebassets\\bookimages\\client-image1.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\client-image2.png",
+      "PackagePath": "staticwebassets\\bookimages\\client-image2.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\client-image3.png",
+      "PackagePath": "staticwebassets\\bookimages\\client-image3.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\client-image4.png",
+      "PackagePath": "staticwebassets\\bookimages\\client-image4.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\client-image5.png",
+      "PackagePath": "staticwebassets\\bookimages\\client-image5.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\curly-divider.svg",
+      "PackagePath": "staticwebassets\\bookimages\\curly-divider.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\default.png",
+      "PackagePath": "staticwebassets\\bookimages\\default.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\device.png",
+      "PackagePath": "staticwebassets\\bookimages\\device.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\google-play.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\google-play.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\item.png",
+      "PackagePath": "staticwebassets\\bookimages\\item.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\item1.png",
+      "PackagePath": "staticwebassets\\bookimages\\item1.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\item3.png",
+      "PackagePath": "staticwebassets\\bookimages\\item3.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\item4.png",
+      "PackagePath": "staticwebassets\\bookimages\\item4.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\item5.png",
+      "PackagePath": "staticwebassets\\bookimages\\item5.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\leaf.png",
+      "PackagePath": "staticwebassets\\bookimages\\leaf.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\main-banner1.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\main-banner1.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\main-banner2.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\main-banner2.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\main-logo.png",
+      "PackagePath": "staticwebassets\\bookimages\\main-logo.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\ns-arrow-right.svg",
+      "PackagePath": "staticwebassets\\bookimages\\ns-arrow-right.svg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\pattern1.png",
+      "PackagePath": "staticwebassets\\bookimages\\pattern1.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\pattern2.png",
+      "PackagePath": "staticwebassets\\bookimages\\pattern2.png"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\post-img1.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\post-img1.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\post-img2.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\post-img2.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\post-img3.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\post-img3.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\product-item1.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\product-item1.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\product-item2.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\product-item2.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\product-item3.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\product-item3.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\product-item4.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\product-item4.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\product-item5.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\product-item5.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\product-item6.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\product-item6.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\product-item7.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\product-item7.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\product-item8.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\product-item8.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\single-image.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\single-image.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\tab-item1.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\tab-item1.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\tab-item2.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\tab-item2.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\tab-item3.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\tab-item3.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\tab-item4.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\tab-item4.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\tab-item5.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\tab-item5.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\tab-item6.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\tab-item6.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\tab-item7.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\tab-item7.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookimages\\tab-item8.jpg",
+      "PackagePath": "staticwebassets\\bookimages\\tab-item8.jpg"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookjs\\jquery-1.11.0.min.js",
+      "PackagePath": "staticwebassets\\bookjs\\jquery-1.11.0.min.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookjs\\plugins.js",
+      "PackagePath": "staticwebassets\\bookjs\\plugins.js"
+    },
+    {
+      "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\bookjs\\script.js",
+      "PackagePath": "staticwebassets\\bookjs\\script.js"
+    },
+    {
       "Id": "D:\\TechBeyondThoughts\\TechBeyondThoughts.Web\\wwwroot\\css\\Register.css",
       "PackagePath": "staticwebassets\\css\\Register.css"
     },

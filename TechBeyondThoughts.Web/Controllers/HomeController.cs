@@ -33,10 +33,8 @@ namespace TechBeyondThoughts.Web.Controllers
         {
             try
             {
-                // Set the page size (you can adjust this based on your requirements)
                 int pageSize = 4;
 
-                // Get technology news from the news service
                 var newsResponse = await _newsService.GetTechnologyNewsAsync();
 
                 if (newsResponse != null && newsResponse.Articles != null)

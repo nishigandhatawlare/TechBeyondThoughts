@@ -78,7 +78,7 @@ namespace TechBeyondThoughts.Services.EBookAPI.Data
             modelBuilder.Entity<BookPreview>().HasData(
                 new BookPreview
                 {
-                    BookId = 1,
+                    BookId = 4,
                     PagesToPreview = 5
                 });
         }

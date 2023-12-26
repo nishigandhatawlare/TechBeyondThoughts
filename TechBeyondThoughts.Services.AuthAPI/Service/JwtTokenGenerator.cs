@@ -14,7 +14,6 @@ namespace TechBeyondThoughts.Services.AuthAPI.Service
         public JwtTokenGenerator(IOptions<JwtOptions> jwtOptions)
         {
 			_jwtOptions = jwtOptions.Value;
-
 		}
         public string GenerateToken(ApplicationUser applicationUser, IEnumerable<string> roles)
 		{

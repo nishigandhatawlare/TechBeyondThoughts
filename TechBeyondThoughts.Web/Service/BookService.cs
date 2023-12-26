@@ -33,27 +33,38 @@ namespace TechBeyondThoughts.Web.Service
             );
         }
 
-        public async Task<ResponceDto?> DownloadBookAsync(int bookId)    //*******
+        public async Task<ResponceDto?> DownloadBookAsync(int bookId)
         {
-             // Make a request to the API to get the file stream
-                return await _baseService.SendAsync(new RequestDto()
-                {
-                    ApiType = SD.ApiType.GET,
-                    Url = $"{SD.BookAPIBase}/api/book/DownloadBook/{bookId}"
-                });
-
-        }
-
-        public async Task<ResponceDto?> GetBookPreviewAsync(int bookId)  //*******
-        {
-            return await _baseService.SendAsync(new RequestDto()
+            return await _baseService.SendPdfAsync(new RequestDto
             {
                 ApiType = SD.ApiType.GET,
-                Url = $"{SD.BookAPIBase}/api/book/GetPreview/{bookId}"
-            }
-            );
+                Url = $"{SD.BookAPIBase}/api/book/DownloadBook/{bookId}"
+            });
         }
 
+        /* public async Task<ResponceDto?> DownloadBookAsync(int bookId)
+         {
+             try
+             {
+                 var apiUrl = $"{SD.BookAPIBase}/api/book/DownloadBook/{bookId}";
+                 var requestDto = new RequestDto { ApiType = SD.ApiType.GET, Url = apiUrl };
+                 var downloadResponse = await _baseService.SendPdfAsync(requestDto);
+
+                 return downloadResponse;
+             }
+             catch (Exception ex)
+             {
+                 var dto = new ResponceDto
+                 {
+                     Message = ex.Message.ToString(),
+                     IsSuccess = false
+                 };
+                 return dto;
+             }
+         }
+ */
+
+       
         public async Task<ResponceDto?> GetBooksAsync()  //*****
         {
             return await _baseService.SendAsync(new RequestDto()

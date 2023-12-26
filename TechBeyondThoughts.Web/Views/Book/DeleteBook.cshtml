@@ -1,0 +1,77 @@
+﻿@model TechBeyondThoughts.Web.Models.BookDataDto
+
+<form asp-action="DeleteBook" asp-route-bookId="@Model.BookId" method="post">
+    <div class="form-group">
+        <label asp-for="Title">Title:</label>
+        <input asp-for="Title" type="text" class="form-control" id="title" disabled>
+        <input asp-for="Title" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Author">Author:</label>
+        <input asp-for="Author" type="text" class="form-control" id="author" disabled required>
+        <input asp-for="Author" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Category">Category:</label>
+        <input asp-for="Category" type="text" class="form-control" id="category" disabled placeholder="Enter technology category" required>
+        <input asp-for="Category" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageUrl">Image URL:</label>
+        <input asp-for="ImageUrl" type="url" class="form-control" id="imageUrl" disabled placeholder="Enter image URL" required>
+        <input asp-for="ImageUrl" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Format">Format:</label>
+        <input asp-for="Format" type="text" class="form-control" id="format" disabled required>
+        <input asp-for="Format" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Published">Published:</label>
+        <input asp-for="Published" type="text" class="form-control" id="published" disabled required>
+        <input asp-for="Published" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Downloads">Downloads:</label>
+        <input asp-for="Downloads" type="text" class="form-control" id="downloads" disabled required>
+        <input asp-for="Downloads" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Pages">Pages:</label>
+        <input asp-for="Pages" type="text" class="form-control" id="pages" disabled required>
+        <input asp-for="Pages" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Description:</label>
+        <textarea asp-for="Description" class="form-control" id="description" rows="4" disabled required></textarea>
+        <input asp-for="Description" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Rating">Rating:</label>
+        <input asp-for="Rating" type="text" class="form-control" id="rating" disabled required>
+        <input asp-for="Rating" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FileName">File Name:</label>
+        <input asp-for="FileName" type="text" class="form-control" id="fileName" disabled required>
+        <input asp-for="FileName" type="hidden" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FilePath">File Path:</label>
+        <input asp-for="FilePath" type="text" class="form-control" id="filePath" disabled required>
+        <input asp-for="FilePath" type="hidden" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Delete Book</button>
+</form>

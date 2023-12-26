@@ -17,7 +17,6 @@ namespace TechBeyondThoughts.Web.Service
         Task<ResponceDto?> DeleteBookAsync(int id);
         Task<ResponceDto?> PostRatingAsync(int bookId, RatingDto ratingDto);
         Task<ResponceDto?> GetRatingsAsync(int bookId);
-        Task<ResponceDto?> GetBookPreviewAsync(int bookId);
         Task<ResponceDto?> DownloadBookAsync(int bookId);
     }
 }

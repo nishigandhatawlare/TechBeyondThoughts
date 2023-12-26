@@ -1,16 +1,48 @@
-﻿@model PaginatedList<TechBeyondThoughts.Web.Models.BookDataDto>
+﻿@model PaginatedList<BookDataDto>
+
 
 @{
-    ViewData["Title"] = "Contact Us";
-    Layout = null; // Disable layout for this view
+    Layout = null;
 }
 
+
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
+
 <head>
-    <partial name="_head"></partial>
+    <title>BookSaw - Free Book Store HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link href="~/bookcss/normalize.css" rel="stylesheet" />
+    <link href="~/bookcss/icomoon.css" rel="stylesheet" />
+    <link href="~/bookcss/vendor.css" rel="stylesheet" />
+    <link href="~/bookcss/style.css" rel="stylesheet" />
 </head>
-<body class="is-boxed has-animations">
+
+<body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
+
+    <div id="search-bar" class="search-bar">
+        <form class="d-flex" asp-controller="Book" asp-action="SearchBook" method="get">
+            <select class="form-control mr-2" name="SearchType" required>
+                <option value="category">Search by Category</option>
+                <option value="author">Search by Author</option>
+                <option value="title">Search by Title</option>
+            </select>
+            <input class="form-control mr-2" type="search" placeholder="Enter your search" name="Keyword" required>
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
 
     @if (TempData["error"] != null)
     {
@@ -26,52 +58,60 @@
         </script>
     }
 
-    <header id="header" class="alt">
-        <a asp-controller="Home" asp-action="Index" class="logo">
-            <strong>TechBeyondThoughts</strong>
-        </a>
-        <nav>
-            <a href="#menu">Menu</a>
-        </nav>
-    </header>
-
-    <div class="body-wrap">
-        <main>
-            <section class="features section">
+    
+            @* *********************** *@
+            <section id="popular-books" class="bookshelf py-5 my-5">
                 <div class="container">
-                    <div class="features section">
+                    <div class="row">
                         @if (Model != null && Model.Any())
                         {
-                            <div class="features-inner section-inner has-bottom-divider">
-                                <a asp-action="Create" class="btn btn-primary">Create New</a>
+                            <a class="nav-link" asp-controller="Book" asp-action="CreateBook">Create Now</a>
+                        <div class="col-md-12">
 
+                            <div class="section-header align-center">
+                                <div class="title">
+                                    <span>Some quality items</span>
+                                </div>
+                                <h2 class="section-title">Popular Books</h2>
+                            </div>
+                               
+                            <div class="tab-content">
+                            <div id="all-genre" data-tab-content class="active">
                                 <div class="row">
                                     @foreach (var tech in Model)
                                     {
                                         <div class="col-md-4">
-                                            <div class="card mb-4">
-                                                <img src="@tech.ImageUrl" class="card-img-top" style="height:200px; width:200px" alt="Book Image">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">@tech.Title</h5>
+                                            <div class="product-item">
+                                                <figure class="product-style">
+                                                    <img src="@tech.ImageUrl" alt="Books" class="product-item" style="height:450px">
+                                                    <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                                        <a asp-action="BookDetails" asp-route-id="@tech.BookId" class="btn btn-primary btn-sm">Read More</a>
+                                                    </button>
+                                                </figure>
+                                                <figcaption>
+                                                    <h3>@tech.Title</h3>
+                                                    <span>@tech.Author</span>
                                                     <p class="card-text">@Html.Raw(Html.Encode(tech.Description.Length > 100 ? tech.Description.Substring(0, 100) + "..." : tech.Description))</p>
-                                                    <!-- Buttons -->
-                                                    <a asp-action="techDetails" asp-route-id="@tech.BookId" class="btn btn-primary btn-sm">Read More</a>
-                                                    @if (User.Identity.IsAuthenticated)
-                                                    {
-                                                        <ul class="navbar-nav me-auto">
-                                                            @if (User.IsInRole("ADMIN"))
-                                                            {
-                                                                <a href="@Url.Action("DeleteTech", "Tech", new { bookId = tech.BookId })" class="deletetech-link btn btn-danger">Delete</a>
-                                                                <a href="@Url.Action("EditTech", "Tech", new { bookId = tech.BookId })" class="updatetech-link btn btn-danger">Update</a>
-                                                            }
-                                                        </ul>
-                                                    }
-                                                </div>
+                                                    <div class="item-price">@tech.Pages</div>
+                                                </figcaption>
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <ul class="navbar-nav me-auto">
+                                                        @if (User.IsInRole("ADMIN"))
+                                                        {
+                                                            <a href="@Url.Action("DeleteBook", "Book", new { bookId = tech.BookId })" class="deletetech-link btn btn-danger">Delete</a>
+                                                            <a href="@Url.Action("EditBook", "Book", new { bookId = tech.BookId })" class="updatetech-link btn btn-danger">Update</a>
+                                                        }
+                                                    </ul>
+                                                }
                                             </div>
                                         </div>
                                     }
                                 </div>
                             </div>
+                        </div>
+                            </div>
+                           
                             <div class="d-flex justify-content-center mt-4">
                                 <nav aria-label="Page navigation example">
                                     <ul class="pagination">
@@ -123,18 +163,21 @@
                     </div>
                 </div>
             </section>
-        </main>
-        <partial name="_footer"></partial>
-    </div>
+            @* *********************** *@
 
-    <script src="~/dist/js/main.min.js"></script>
-    <script src="~/assets/js/jquery.min.js"></script>
-    <script src="~/assets/js/jquery.scrolly.min.js"></script>
-    <script src="~/assets/js/jquery.scrollex.min.js"></script>
-    <script src="~/assets/js/browser.min.js"></script>
-    <script src="~/assets/js/breakpoints.min.js"></script>
-    <script src="~/assets/js/util.js"></script>
-    <script src="~/assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        
+        <partial name="_footer"></partial>
+    
+    <script src="~/bookjs/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    <script src="~/bookjs/plugins.js"></script>
+    <script src="~/bookjs/script.js"></script>
 </body>
+
 </html>
+
+
+
+

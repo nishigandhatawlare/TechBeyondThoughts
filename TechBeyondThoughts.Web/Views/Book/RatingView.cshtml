@@ -1,0 +1,23 @@
+﻿@model List<RatingDto>
+
+<h2>Ratings</h2>
+
+<div id="ratingsContainer">
+    @foreach (var rating in Model)
+    {
+        <div class="rating">
+            <span class="fa fa-star @((rating.Value >= 1) ? "checked" : "")"></span>
+            <span class="fa fa-star @((rating.Value >= 2) ? "checked" : "")"></span>
+            <span class="fa fa-star @((rating.Value >= 3) ? "checked" : "")"></span>
+            <span class="fa fa-star @((rating.Value >= 4) ? "checked" : "")"></span>
+            <span class="fa fa-star @((rating.Value == 5) ? "checked" : "")"></span>
+            <span class="rating-value">(@rating.Value)</span>
+        </div>
+    }
+</div>
+
+@section scripts {
+    <script>
+        // Add any additional JavaScript for interactivity here
+    </script>
+}

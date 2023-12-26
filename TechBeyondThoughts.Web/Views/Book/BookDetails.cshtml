@@ -1,0 +1,132 @@
+﻿@model BookDataDto
+
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BookSaw - Free Book Store HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link href="~/bookcss/normalize.css" rel="stylesheet" />
+    <link href="~/bookcss/icomoon.css" rel="stylesheet" />
+    <link href="~/bookcss/vendor.css" rel="stylesheet" />
+    <link href="~/bookcss/style.css" rel="stylesheet" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
+
+    <div id="search-bar" class="search-bar">
+        <form class="d-flex" asp-controller="Book" asp-action="SearchBook" method="get">
+            <select class="form-control mr-2" name="SearchType" required>
+                <option value="category">Search by Category</option>
+                <option value="author">Search by Author</option>
+                <option value="title">Search by Title</option>
+            </select>
+            <input class="form-control mr-2" type="search" placeholder="Enter your search" name="Keyword" required>
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+
+    @if (TempData["error"] != null)
+    {
+        <script>
+            toastr.error('@TempData["error"]');
+        </script>
+    }
+
+    @if (TempData["success"] != null)
+    {
+        <script>
+            toastr.success('@TempData["success"]');
+        </script>
+    }
+
+
+    @* *********************** *@
+
+
+    <section id="best-selling" class="leaf-pattern-overlay">
+        <div class="corner-pattern-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-md-8">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <figure class="products-thumb">
+
+                                <img src="@Model.ImageUrl" alt="book" class="single-image" />
+                               
+                            </figure>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="product-entry">
+                                <h2 class="section-title divider">Best Selling Book</h2>
+
+                                <div class="products-content">
+                                    <div class="author-name">By @Model.Author</div>
+                                    <h3 class="item-title">@Model.Title</h3>
+                                    <p>
+                                       @Model.Description
+                                    </p>
+                                    <div class="item-price">@Model.Pages</div>
+
+                                    <div class="btn-wrap">
+                                        <a asp-controller="Book" asp-action="DownloadBook" asp-route-id="@Model.BookId" class="btn btn-primary" download="@Model.FileName">Download Book</a>
+                                    </div>
+                                    <a asp-controller="Book" asp-action="BookIndex" class="btn btn-primary">Back to BookStore</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / row -->
+                </div>
+            </div>
+        </div>
+    </section>
+    @* *********************** *@
+  
+
+    <partial name="_footer"></partial>
+
+    <script src="~/bookjs/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    <script src="~/bookjs/plugins.js"></script>
+    <script src="~/bookjs/script.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+

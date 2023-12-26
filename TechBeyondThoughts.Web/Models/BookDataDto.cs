@@ -17,6 +17,7 @@ namespace TechBeyondThoughts.Web.Models
         public string Description { get; set; }
         public double Rating { get; set; }
         public string FileName { get; set; }  // Store file name
+        [Display(Name = "File URL")]
         public string FilePath { get; set; }  // Store file path or URL
 
     }

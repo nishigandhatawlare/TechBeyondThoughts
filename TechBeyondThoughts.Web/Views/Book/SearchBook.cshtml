@@ -1,0 +1,35 @@
+﻿@model List<BookDataDto>
+
+<div class="container">
+    <h3 class="display-4" style="color: white">Search Results</h3>
+
+
+    <div id="categorySuggestions" style="display: none;">
+    </div>
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="row">
+            @foreach (var tech in Model)
+            {
+                <div class="col-md-6 mb-4">
+                    <div class="blog-post" style="border: 1px solid white; margin-bottom: 15px;">
+                        <img src="@tech.ImageUrl" class="img-fluid" alt="Technology Image" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="blog-post-content" style="padding: 10px;">
+                            <h2 class="blog-post-title" style="color: white; font-size: 1.5rem;">@tech.Title</h2>
+                            <p class="card-text" style="color: white; font-size: 0.9rem;">
+                                @Html.Raw(Html.Encode(tech.Description.Length > 80 ? tech.Description.Substring(0, 80) + "..." : tech.Description))
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <a asp-action="BookDetails" asp-route-bookId="@tech.BookId" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>No results found.</p>
+    }
+</div>

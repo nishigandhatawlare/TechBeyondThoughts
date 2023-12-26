@@ -24,8 +24,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Book/BookDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Book/BookIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Book/CreateBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xDcmVhdGVCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Book/DeleteBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xEZWxldGVCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Book/DownloadBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xEb3dubG9hZEJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Book/EditBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xFZGl0Qm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Book/RatingView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xSYXRpbmdWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Book/SearchBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xTZWFyY2hCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Home/About.cshtml]
@@ -58,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Shared/_BookPreview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb29rUHJldmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TechBeyondThoughts/TechBeyondThoughts.Web/Views/Shared/_CustomLayout.cshtml]
